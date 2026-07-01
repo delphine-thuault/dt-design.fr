@@ -101,11 +101,16 @@
       justify-content: space-between;
     }
     .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 400;
-      color: var(--vert);
-      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .nav-logo-img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      display: block;
     }
     .nav-logo span {
       font-size: 0.65rem;
@@ -114,8 +119,6 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--texte-doux);
-      display: block;
-      margin-top: -2px;
     }
     .nav-links {
       display: flex;
@@ -319,40 +322,72 @@
     }
     .prestations-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5px;
-      background: var(--border);
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
     }
     .prestation-card {
       background: var(--blanc);
-      padding: 2.5rem 2rem;
-      transition: background 0.25s;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.2s;
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
     }
-    .prestation-card:hover { background: var(--ivoire); }
-    .prestation-num {
-      font-family: var(--font-display);
-      font-size: 3.5rem;
-      font-weight: 300;
-      color: var(--lin);
-      line-height: 1;
-      margin-bottom: 1rem;
+    .prestation-card-star {
+      border-color: var(--or);
+      position: relative;
+    }
+    .prestation-badge {
+      display: inline-block;
+      background: var(--or);
+      color: var(--blanc);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      margin-bottom: 0.5rem;
+    }
+    .prestation-card:hover {
+      box-shadow: 0 8px 32px rgba(61,74,62,0.10);
+      transform: translateY(-3px);
+    }
+    .prestation-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+    }
+    .prestation-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .prestation-card:hover .prestation-photo img { transform: scale(1.05); }
+    /* Placeholders colorés en attendant les vraies photos */
+    .prestation-photo-1 { background: linear-gradient(135deg, #e8d5c4 0%, #c8b4a0 100%); }
+    .prestation-photo-2 { background: linear-gradient(135deg, #c8d5c4 0%, #8fa68e 100%); }
+    .prestation-photo-3 { background: linear-gradient(135deg, #d5cfe8 0%, #a8a0c8 100%); }
+    .prestation-photo-4 { background: linear-gradient(135deg, #e8e0d0 0%, #c8bfae 100%); }
+    .prestation-body {
+      padding: 1.5rem;
     }
     .prestation-title {
       font-family: var(--font-display);
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: var(--vert);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.6rem;
     }
     .prestation-desc {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--texte-doux);
       line-height: 1.75;
     }
     .prestation-tag {
       display: inline-block;
-      margin-top: 1.25rem;
-      font-size: 0.68rem;
+      margin-top: 1rem;
+      font-size: 0.65rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--or);
@@ -627,6 +662,7 @@
       .zone-grid,
       .contact-grid { grid-template-columns: 1fr; }
       .prestations-grid { grid-template-columns: 1fr 1fr; }
+
       .portfolio-item:nth-child(1) { grid-column: span 12; }
       .portfolio-item:nth-child(2) { grid-column: span 12; }
       .portfolio-item:nth-child(3),
@@ -675,7 +711,7 @@
   <nav>
     <div class="nav-inner">
       <a href="#accueil" class="nav-logo">
-        DT — Design
+        <img src="logo.png" alt="DT Design — Delphine Thuault" class="nav-logo-img" />
         <span>Delphine Thuault · Architecte d'intérieur</span>
       </a>
       <ul class="nav-links">
@@ -803,42 +839,47 @@
         </p>
       </div>
       <div class="prestations-grid">
-        <div class="prestation-card">
-          <div class="prestation-num">01</div>
-          <h3 class="prestation-title">Conception & Aménagement</h3>
-          <p class="prestation-desc">Plans d'aménagement, sélection des matériaux, coordination des artisans. Je prends en charge votre projet de A à Z, depuis la prise de mesures jusqu'à la livraison finale.</p>
-          <span class="prestation-tag">Résidentiel & Professionnel</span>
-        </div>
-        <div class="prestation-card">
-          <div class="prestation-num">02</div>
-          <h3 class="prestation-title">Décoration & Relooking</h3>
-          <p class="prestation-desc">Redonner vie à un espace existant sans tout chambouler. Sélection mobilier, palettes de couleurs, mise en scène et accessoirisation selon votre style et votre budget.</p>
-          <span class="prestation-tag">Sans travaux possibles</span>
-        </div>
-        <div class="prestation-card">
-          <div class="prestation-num">03</div>
-          <h3 class="prestation-title">Conseil à domicile</h3>
-          <p class="prestation-desc">Une visite de 2h pour faire le point sur votre espace, identifier les blocages et repartir avec un plan d'action concret. Idéal avant d'investir dans des travaux.</p>
-          <span class="prestation-tag">Dès 150 € / 2h</span>
-        </div>
-        <div class="prestation-card">
-          <div class="prestation-num">04</div>
-          <h3 class="prestation-title">Home Staging</h3>
-          <p class="prestation-desc">Valoriser votre bien avant une vente ou une location. Mise en scène professionnelle pour des photos et visites qui font la différence sur le marché immobilier normand.</p>
-          <span class="prestation-tag">Vente & Location</span>
-        </div>
-        <div class="prestation-card">
-          <div class="prestation-num">05</div>
-          <h3 class="prestation-title">Bilan Feng Shui</h3>
-          <p class="prestation-desc">Analyse énergétique de votre habitat ou local professionnel. Recommandations pratiques pour harmoniser les flux, favoriser la sérénité et soutenir vos objectifs.</p>
-          <span class="prestation-tag">Habitat & Entreprise</span>
-        </div>
-        <div class="prestation-card">
-          <div class="prestation-num">06</div>
-          <h3 class="prestation-title">Suivi de chantier</h3>
-          <p class="prestation-desc">Coordination des corps de métier, vérification des avancements, respect des délais et du cahier des charges. Je suis présente pour que votre chantier se déroule sereinement.</p>
-          <span class="prestation-tag">Sur devis</span>
-        </div>
+        <a href="prestations.html#conseils" class="prestation-card">
+          <div class="prestation-photo prestation-photo-1">
+            <!-- <img src="images/conseil.jpg" alt="Rendez-vous conseils"> -->
+          </div>
+          <div class="prestation-body">
+            <h3 class="prestation-title">Rendez-vous conseils</h3>
+            <p class="prestation-desc">Premier contact sur place pour échanger ensemble et comprendre votre projet. Une écoute attentive avant toute préconisation.</p>
+            <span class="prestation-tag">En savoir plus →</span>
+          </div>
+        </a>
+        <a href="prestations.html#amenagement" class="prestation-card">
+          <div class="prestation-photo prestation-photo-2">
+            <!-- <img src="images/amenagement.jpg" alt="Aménagement d'intérieur"> -->
+          </div>
+          <div class="prestation-body">
+            <h3 class="prestation-title">Aménagement d'intérieur</h3>
+            <p class="prestation-desc">Étude de votre lieu de vie pour une amélioration ergonomique et esthétique. Plans, matériaux, coordination — je prends en charge votre projet de A à Z.</p>
+            <span class="prestation-tag">En savoir plus →</span>
+          </div>
+        </a>
+        <a href="prestations.html#psychologie" class="prestation-card">
+          <div class="prestation-photo prestation-photo-3">
+            <!-- <img src="images/psychologie.jpg" alt="Psychologie de l'habitat"> -->
+          </div>
+          <div class="prestation-body">
+            <h3 class="prestation-title">Psychologie de l'habitat</h3>
+            <p class="prestation-desc">Créer un habitat aligné avec votre bien-être grâce à une approche intégrant neuro-architecture et Feng Shui. Votre espace agit sur vous — autant qu'il vous ressemble.</p>
+            <span class="prestation-tag">En savoir plus →</span>
+          </div>
+        </a>
+        <a href="prestations.html#perret" class="prestation-card prestation-card-star">
+          <div class="prestation-photo prestation-photo-4">
+            <!-- <img src="images/perret.jpg" alt="Rénovation Perret"> -->
+          </div>
+          <div class="prestation-body">
+            <span class="prestation-badge">Expertise unique</span>
+            <h3 class="prestation-title">Rénovation Perret</h3>
+            <p class="prestation-desc">Votre appartement Perret au Havre a un potentiel incroyable… et si on le révélait ensemble ? Une expertise rare, ancrée dans le patrimoine de la Reconstruction.</p>
+            <span class="prestation-tag">En savoir plus →</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -959,13 +1000,13 @@
             <div class="contact-item">
               <span class="contact-item-label">Email</span>
               <div class="contact-item-value">
-                <a href="mailto:contact@dt-design.fr">contact@dt-design.fr</a>
+                <a href="mailto:delphine@dt-design.fr">delphine@dt-design.fr</a>
               </div>
             </div>
             <div class="contact-item">
               <span class="contact-item-label">Téléphone</span>
               <div class="contact-item-value">
-                <a href="tel:+33600000000">06 XX XX XX XX</a>
+                <a href="tel:+33767799756">07 67 79 97 56</a>
               </div>
             </div>
             <div class="contact-item">
@@ -989,7 +1030,7 @@
           </div>
         </div>
         <div>
-          <form class="contact-form" action="mailto:contact@dt-design.fr" method="post" enctype="text/plain">
+          <form class="contact-form" action="mailto:delphine@dt-design.fr" method="post" enctype="text/plain">
             <div class="form-group">
               <label for="nom">Nom & Prénom</label>
               <input type="text" id="nom" name="nom" placeholder="Marie Dupont" required />
@@ -1029,10 +1070,13 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">DT — Design</span>
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <img src="logo.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
+          <span class="footer-logo">DT — Design</span>
+        </div>
         <span>© 2025 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
         <span>
-          <a href="mailto:contact@dt-design.fr">contact@dt-design.fr</a>
+          <a href="mailto:delphine@dt-design.fr">delphine@dt-design.fr</a>
           · <a href="#">Mentions légales</a>
         </span>
       </div>
