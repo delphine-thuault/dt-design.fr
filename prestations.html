@@ -96,6 +96,8 @@
       transition: all 0.2s;
     }
     .page-nav-prestations a:hover,
+    .page-nav-prestations a.accueil { border-color: var(--vert); color: var(--vert); font-weight: 500; }
+    .page-nav-prestations a.accueil:hover { background: var(--vert); color: var(--blanc); }
     .page-nav-prestations a.perret { border-color: var(--or); color: var(--or); }
 
     /* SECTIONS PRESTATIONS */
@@ -346,6 +348,7 @@
         <h1>Mes prestations</h1>
         <p>De la première rencontre à la livraison finale, je vous accompagne à chaque étape de votre projet — avec écoute, expertise et un regard singulier sur votre espace.</p>
         <nav class="page-nav-prestations">
+          <a href="index.html" class="accueil">← Accueil</a>
           <a href="#conseils">Rendez-vous conseils</a>
           <a href="#perret" class="perret">✦ Rénovation Perret</a>
           <a href="#amenagement">Aménagement d'intérieur</a>
