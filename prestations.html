@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prestations — DT Design · Delphine Thuault, Architecte d'intérieur Le Havre</title>
+  <meta name="description" content="Découvrez les prestations de Delphine Thuault : rendez-vous conseils, aménagement d'intérieur, psychologie de l'habitat et rénovation d'appartements Perret au Havre." />
+  <link rel="canonical" href="https://dt-design.fr/prestations.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --vert:       #3D4A3E;
+      --sauge:      #8FA68E;
+      --lin:        #C8BFAE;
+      --ivoire:     #F5F3EF;
+      --or:         #B5986A;
+      --blanc:      #ffffff;
+      --texte:      #2E2E2E;
+      --texte-doux: #5A5A5A;
+      --border:     #E2DED7;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Inter', system-ui, sans-serif;
+      --radius: 2px;
+      --max:    1100px;
+      --gap:    clamp(2.5rem, 6vw, 5rem);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--texte); background: var(--blanc); }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
+    .eyebrow { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--or); margin-bottom: 0.85rem; }
+    .divider { width: 40px; height: 1px; background: var(--or); margin: 1.5rem 0; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-logo-img { width: 48px; height: 48px; object-fit: contain; }
+    .nav-logo span { font-size: 0.65rem; font-family: var(--font-body); font-weight: 300; letter-spacing: 0.14em; text-transform: uppercase; color: var(--texte-doux); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texte-doux); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--vert); }
+    .nav-cta { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; padding: 0.5rem 1.25rem; border: 1px solid var(--vert); color: var(--vert); border-radius: var(--radius); transition: background 0.2s, color 0.2s; }
+    .nav-cta:hover { background: var(--vert); color: var(--blanc); }
+    .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 4px; }
+    .burger span { display: block; width: 22px; height: 1.5px; background: var(--vert); }
+    .mobile-nav { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--blanc); border-bottom: 1px solid var(--border); padding: 1.5rem clamp(1.25rem, 4vw, 3rem); flex-direction: column; gap: 1.25rem; z-index: 99; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texte-doux); }
+
+    /* HERO PAGE */
+    .page-hero {
+      padding-top: 64px;
+      background: var(--ivoire);
+      padding-bottom: 0;
+    }
+    .page-hero-inner {
+      padding: clamp(3rem, 6vw, 5rem) 0 0;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      color: var(--vert);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .page-hero p {
+      font-size: 1rem;
+      color: var(--texte-doux);
+      max-width: 50ch;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+    .page-nav-prestations {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+    }
+    .page-nav-prestations a {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--texte-doux);
+      transition: all 0.2s;
+    }
+    .page-nav-prestations a:hover,
+    .page-nav-prestations a.perret { border-color: var(--or); color: var(--or); }
+
+    /* SECTIONS PRESTATIONS */
+    .prestation-section {
+      padding: var(--gap) 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .prestation-section:last-of-type { border-bottom: none; }
+    .prestation-section.alt { background: var(--ivoire); }
+
+    .prestation-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: center;
+    }
+    .prestation-layout.reverse { direction: rtl; }
+    .prestation-layout.reverse > * { direction: ltr; }
+
+    .prestation-image {
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+    }
+    .prestation-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      font-family: var(--font-body);
+    }
+    .ph-1 { background: linear-gradient(135deg, #e8d5c4, #c8b4a0); }
+    .ph-2 { background: linear-gradient(135deg, #c8d5c4, #8fa68e); }
+    .ph-3 { background: linear-gradient(135deg, #d5cfe8, #a8a0c8); }
+    .ph-4 { background: linear-gradient(135deg, #3D4A3E, #2a3428); }
+
+    .prestation-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 300;
+      color: var(--vert);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .prestation-content p {
+      font-size: 0.92rem;
+      color: var(--texte-doux);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+    .prestation-details {
+      margin: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .detail-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.85rem;
+      color: var(--texte-doux);
+    }
+    .detail-item::before {
+      content: '—';
+      color: var(--or);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .btn-contact {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--vert);
+      color: var(--blanc);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.8rem 1.75rem;
+      border-radius: var(--radius);
+      transition: background 0.2s;
+    }
+    .btn-contact:hover { background: #2c3830; }
+
+    /* ── SECTION PERRET — SIGNATURE ── */
+    #perret {
+      background: var(--vert);
+      border-bottom: none;
+      padding: var(--gap) 0;
+    }
+    #perret .eyebrow { color: var(--or); }
+    #perret .prestation-content h2 { color: var(--blanc); }
+    #perret .prestation-content p { color: rgba(255,255,255,0.75); }
+    #perret .detail-item { color: rgba(255,255,255,0.75); }
+    #perret .detail-item::before { color: var(--or); }
+    #perret .btn-contact { background: var(--or); color: var(--blanc); }
+    #perret .btn-contact:hover { background: #9a7d52; }
+
+    .perret-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(181,152,106,0.15);
+      border: 1px solid rgba(181,152,106,0.4);
+      color: var(--or);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+    }
+
+    .perret-quote {
+      margin: 2rem 0;
+      padding: 1.5rem 2rem;
+      border-left: 2px solid var(--or);
+      background: rgba(255,255,255,0.05);
+    }
+    .perret-quote p {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(255,255,255,0.9) !important;
+      line-height: 1.6;
+      margin: 0 !important;
+    }
+
+    .perret-image {
+      position: relative;
+    }
+    .perret-image-tag {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: rgba(61,74,62,0.85);
+      color: rgba(255,255,255,0.8);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius);
+    }
+
+    /* ÉTAPES */
+    .etapes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0; }
+    .etape { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); padding: 1.25rem; border-radius: var(--radius); }
+    .etape-num { font-family: var(--font-display); font-size: 2rem; font-weight: 300; color: var(--or); line-height: 1; margin-bottom: 0.4rem; }
+    .etape-title { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.9); margin-bottom: 0.35rem; }
+    .etape-desc { font-size: 0.78rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* MATÉRIAUX */
+    .materiaux { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0; }
+    .materiau { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); padding: 1.25rem; border-radius: var(--radius); text-align: center; }
+    .materiau-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .materiau-title { font-size: 0.78rem; font-weight: 500; color: var(--or); margin-bottom: 0.3rem; letter-spacing: 0.06em; }
+    .materiau-desc { font-size: 0.74rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+    /* PERRET IMAGE TAG */
+    .perret-image-tag { position: absolute; bottom: 1rem; left: 1rem; background: rgba(30,40,30,0.82); color: rgba(255,255,255,0.8); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: var(--radius); }
+    .cta-section {
+      padding: var(--gap) 0;
+      background: var(--ivoire);
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 300;
+      color: var(--vert);
+      margin-bottom: 0.75rem;
+    }
+    .cta-section p { font-size: 0.92rem; color: var(--texte-doux); margin-bottom: 2rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--vert);
+      color: var(--vert);
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.8rem 1.75rem;
+      border-radius: var(--radius);
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: var(--vert); color: var(--blanc); }
+
+    /* FOOTER */
+    footer { background: var(--vert); color: rgba(255,255,255,0.6); padding: 2rem 0; font-size: 0.75rem; letter-spacing: 0.05em; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 300; color: var(--blanc); }
+    footer a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
+    footer a:hover { color: var(--or); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .prestation-layout, .prestation-layout.reverse { grid-template-columns: 1fr; direction: ltr; }
+      .nav-links, .nav-cta { display: none; }
+      .burger { display: flex; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="DT Design" class="nav-logo-img" />
+        <span>Delphine Thuault · Architecte d'intérieur</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#apropos">À propos</a></li>
+        <li><a href="prestations.html" class="active">Prestations</a></li>
+        <li><a href="index.html#portfolio">Réalisations</a></li>
+        <li><a href="index.html#temoignages">Témoignages</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Prendre contact</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#apropos" onclick="this.closest('.mobile-nav').classList.remove('open')">À propos</a>
+    <a href="prestations.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Prestations</a>
+    <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
+    <a href="index.html#temoignages" onclick="this.closest('.mobile-nav').classList.remove('open')">Témoignages</a>
+    <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
+  </div>
+
+  <!-- HERO PAGE -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <p class="eyebrow">Ce que je fais pour vous</p>
+        <h1>Mes prestations</h1>
+        <p>De la première rencontre à la livraison finale, je vous accompagne à chaque étape de votre projet — avec écoute, expertise et un regard singulier sur votre espace.</p>
+        <nav class="page-nav-prestations">
+          <a href="#conseils">Rendez-vous conseils</a>
+          <a href="#perret" class="perret">✦ Rénovation Perret</a>
+          <a href="#amenagement">Aménagement d'intérieur</a>
+          <a href="#psychologie">Psychologie de l'habitat</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. RENDEZ-VOUS CONSEILS -->
+  <section class="prestation-section" id="conseils">
+    <div class="container">
+      <div class="prestation-layout">
+        <div class="prestation-image">
+          <!-- <img src="images/conseil.jpg" alt="Rendez-vous conseils DT Design"> -->
+          <div class="prestation-image-placeholder ph-1">Votre photo ici</div>
+        </div>
+        <div class="prestation-content">
+          <p class="eyebrow">Prestation 01</p>
+          <h2>Rendez-vous conseils</h2>
+          <div class="divider"></div>
+          <p>Le point de départ de tout projet réussi. Je me déplace chez vous pour une première rencontre sur place : écouter vos envies, observer votre espace, comprendre votre mode de vie et identifier les axes d'amélioration.</p>
+          <p>Pas de préconisation standardisée — chaque visite est unique, centrée sur vous et votre réalité quotidienne.</p>
+          <div class="prestation-details">
+            <div class="detail-item">Visite à domicile ou en local professionnel</div>
+            <div class="detail-item">Durée : 1h30 à 2h selon la surface</div>
+            <div class="detail-item">Compte-rendu écrit remis sous 48h</div>
+            <div class="detail-item">Sans engagement — idéal avant de décider</div>
+          </div>
+          <a href="index.html#contact" class="btn-contact">Prendre rendez-vous</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. RÉNOVATION PERRET — SIGNATURE -->
+  <section class="prestation-section" id="perret">
+    <div class="container">
+      <div class="prestation-layout reverse">
+        <div class="prestation-image" style="position:relative;">
+          <!-- <img src="images/perret.jpg" alt="Appartement Perret Le Havre rénovation"> -->
+          <div class="prestation-image-placeholder ph-4" style="aspect-ratio:4/3;">Votre photo ici</div>
+          <div class="perret-image-tag">Le Havre · Patrimoine UNESCO 2005</div>
+        </div>
+        <div class="prestation-content">
+          <span class="perret-badge">✦ Expertise unique au Havre</span>
+          <p class="eyebrow">Prestation 02</p>
+          <h2>Sublimer votre appartement Perret</h2>
+          <div class="divider"></div>
+          <p>Le centre-ville du Havre, reconstruit après la Seconde Guerre mondiale sous la direction d'Auguste Perret, est classé au patrimoine mondial de l'UNESCO depuis 2005. Ses immeubles en béton armé, reconnaissables à leurs façades rythmées et leurs grandes baies vitrées, constituent un patrimoine architectural unique en France.</p>
+          <div class="perret-quote">
+            <p>Rénover un appartement Perret, c'est s'inscrire dans une histoire, respecter une cohérence architecturale tout en créant un intérieur qui vous ressemble.</p>
+          </div>
+          <p>Mon rôle est de sublimer les caractéristiques exceptionnelles de ces appartements — volumes généreux, luminosité remarquable, double orientation — tout en les adaptant à votre mode de vie. Que vous soyez dans le quartier Saint-François, autour de l'Hôtel de Ville ou boulevard de Strasbourg, je vous accompagne de A à Z.</p>
+
+          <p style="font-size:0.85rem; font-weight:500; color:rgba(255,255,255,0.9); margin-top:1.25rem; margin-bottom:0.5rem;">Contraintes techniques maîtrisées :</p>
+          <div class="detail-list">
+            <div class="detail-item">Identification des colonnes porteuses et cloisons d'origine</div>
+            <div class="detail-item">Optimisation de la lumière naturelle et des grandes baies vitrées</div>
+            <div class="detail-item">Gestion du chauffage collectif et isolation spécifique au béton armé</div>
+            <div class="detail-item">Artisans partenaires spécialisés en rénovation Perret au Havre</div>
+          </div>
+
+          <p style="font-size:0.85rem; font-weight:500; color:rgba(255,255,255,0.9); margin-top:1.5rem; margin-bottom:0.75rem;">Les 4 étapes de votre projet :</p>
+          <div class="etapes">
+            <div class="etape">
+              <div class="etape-num">01</div>
+              <div class="etape-title">Rendez-vous conseils</div>
+              <div class="etape-desc">Visite de votre appartement, échanges sur vos besoins et les contraintes spécifiques du bien.</div>
+            </div>
+            <div class="etape">
+              <div class="etape-num">02</div>
+              <div class="etape-title">Avant-Projet Sommaire</div>
+              <div class="etape-desc">Deux ébauches de plans avec vues 3D pour vous projeter dans votre futur intérieur.</div>
+            </div>
+            <div class="etape">
+              <div class="etape-num">03</div>
+              <div class="etape-title">Avant-Projet Définitif</div>
+              <div class="etape-desc">Plans définitifs et vues photoréalistes pour valider chaque choix avant travaux.</div>
+            </div>
+            <div class="etape">
+              <div class="etape-num">04</div>
+              <div class="etape-title">Mise en relation</div>
+              <div class="etape-desc">Connexion avec mes artisans partenaires de confiance au Havre pour la réalisation.</div>
+            </div>
+          </div>
+
+          <p style="font-size:0.85rem; font-weight:500; color:rgba(255,255,255,0.9); margin-top:1.5rem; margin-bottom:0.75rem;">Matériaux qui subliment le béton Perret :</p>
+          <div class="materiaux">
+            <div class="materiau">
+              <div class="materiau-icon">🪵</div>
+              <div class="materiau-title">Bois & Béton</div>
+              <div class="materiau-desc">La chaleur du bois adoucit la minéralité du béton pour une atmosphère cosy et moderne.</div>
+            </div>
+            <div class="materiau">
+              <div class="materiau-icon">✨</div>
+              <div class="materiau-title">Laiton & Béton</div>
+              <div class="materiau-desc">Une touche d'élégance et de sophistication pour un style contemporain haut de gamme.</div>
+            </div>
+            <div class="materiau">
+              <div class="materiau-icon">🎨</div>
+              <div class="materiau-title">Couleurs douces</div>
+              <div class="materiau-desc">Des teintes naturelles qui mettent en valeur la lumière naturelle abondante des appartements Perret.</div>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn-contact">Parler de mon appartement Perret</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. AMÉNAGEMENT D'INTÉRIEUR -->
+  <section class="prestation-section alt" id="amenagement">
+    <div class="container">
+      <div class="prestation-layout">
+        <div class="prestation-image">
+          <!-- <img src="images/amenagement.jpg" alt="Aménagement intérieur Le Havre Normandie"> -->
+          <div class="prestation-image-placeholder ph-3">Votre photo ici</div>
+        </div>
+        <div class="prestation-content">
+          <p class="eyebrow">Prestation 03</p>
+          <h2>Aménagement d'intérieur</h2>
+          <div class="divider"></div>
+          <p>Architecte d'intérieur au Havre et en Normandie, je conçois et aménage des espaces de vie alliant esthétisme, fonctionnalité et cohérence. Chaque projet est pensé sur mesure afin d'optimiser le potentiel de votre lieu de vie et de répondre précisément à vos besoins.</p>
+          <p>Un intérieur ne se limite pas à son apparence : il a un impact direct sur votre bien-être au quotidien. Lumière, volumes, couleurs et organisation de l'espace influencent votre équilibre émotionnel et mental.</p>
+          <div class="detail-list">
+            <div class="detail-item">Plans d'aménagement et visuels 2D/3D</div>
+            <div class="detail-item">Sélection des matériaux, couleurs et mobilier</div>
+            <div class="detail-item">Coordination des artisans et suivi de chantier</div>
+            <div class="detail-item">Résidentiel et professionnel — appartement, maison, local</div>
+            <div class="detail-item">Accompagnement de A à Z, sur devis personnalisé</div>
+          </div>
+          <a href="index.html#contact" class="btn-contact">Me parler de votre projet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PSYCHOLOGIE DE L'HABITAT -->
+  <section class="prestation-section" id="psychologie">
+    <div class="container">
+      <div class="prestation-layout reverse">
+        <div class="prestation-image">
+          <!-- <img src="images/psychologie.jpg" alt="Psychologie habitat neuro-architecture Feng Shui"> -->
+          <div class="prestation-image-placeholder ph-2" style="filter:hue-rotate(200deg);">Votre photo ici</div>
+        </div>
+        <div class="prestation-content">
+          <p class="eyebrow">Prestation 04</p>
+          <h2>Psychologie de l'habitat</h2>
+          <div class="divider"></div>
+          <p>En intégrant des principes issus de la neuro-architecture, de la psychologie des couleurs et du Feng Shui, je conçois des espaces fonctionnels et harmonieux, parfaitement adaptés à votre mode de vie et à votre personnalité.</p>
+          <p>Votre espace n'est pas neutre. Il agit sur votre humeur, votre concentration, votre sommeil, vos relations. Cette approche va au-delà de la simple décoration : elle transforme votre intérieur en un véritable allié de votre bien-être quotidien.</p>
+          <div class="detail-list">
+            <div class="detail-item">Analyse énergétique de votre habitat ou local professionnel (Feng Shui)</div>
+            <div class="detail-item">Bilan neuro-architectural : lumière, couleurs, circulations, volumes</div>
+            <div class="detail-item">Psychologie des couleurs appliquée à vos espaces</div>
+            <div class="detail-item">Recommandations pratiques applicables immédiatement</div>
+            <div class="detail-item">Accompagnement ponctuel ou intégré à un projet global</div>
+          </div>
+          <a href="index.html#contact" class="btn-contact">Découvrir cette approche</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="cta-section">
+    <div class="container">
+      <p class="eyebrow">Première prise de contact gratuite</p>
+      <h2>Un projet en tête ?</h2>
+      <p>Quelle que soit l'étape où vous en êtes — simple idée ou projet bien défini — je serais ravie d'en discuter avec vous.</p>
+      <div class="cta-actions">
+        <a href="index.html#contact" class="btn-contact">Me contacter</a>
+        <a href="index.html" class="btn-outline">← Retour à l'accueil</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <img src="logo.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
+          <span class="footer-logo">DT — Design</span>
+        </div>
+        <span>© 2025 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
+        <span>
+          <a href="mailto:delphine@dt-design.fr">delphine@dt-design.fr</a>
+          · <a href="tel:+33767799756">07 67 79 97 56</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
