@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-books — DT Design · Delphine Thuault</title>
+  <meta name="description" content="Téléchargez gratuitement les guides pratiques de Delphine Thuault sur l'architecture d'intérieur, la rénovation Perret et le bien-être dans l'habitat." />
+  <link rel="canonical" href="https://dt-design.fr/ebook.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vert:#3D4A3E;--sauge:#8FA68E;--lin:#C8BFAE;--ivoire:#F5F3EF;--or:#B5986A;
+      --blanc:#ffffff;--texte:#2E2E2E;--texte-doux:#5A5A5A;--border:#E2DED7;
+      --font-display:'Cormorant Garamond',Georgia,serif;
+      --font-body:'Inter',system-ui,sans-serif;
+      --radius:2px;--max:1100px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--texte);background:var(--blanc)}
+    img{display:block;object-fit:cover}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+    .eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:0.85rem}
+    .divider{width:40px;height:1px;background:var(--or);margin:1.5rem 0}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem);height:68px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .nav-logo{display:flex;align-items:center;gap:0.85rem}
+    .nav-logo-img{width:52px;height:52px;object-fit:contain;flex-shrink:0}
+    .nav-logo-text{display:flex;flex-direction:column;gap:1px}
+    .nav-logo-name{font-family:var(--font-display);font-size:1.1rem;font-weight:400;color:var(--vert);letter-spacing:0.04em;white-space:nowrap}
+    .nav-logo-titre{font-size:0.62rem;font-family:var(--font-body);font-weight:300;letter-spacing:0.14em;text-transform:uppercase;color:var(--texte-doux);white-space:nowrap}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;flex:1;justify-content:center}
+    .nav-links a{font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--texte-doux);transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--vert)}
+    .nav-cta{font-size:0.78rem;font-weight:500;letter-spacing:0.06em;padding:0.5rem 1.25rem;border:1px solid var(--vert);color:var(--vert);border-radius:var(--radius);transition:background 0.2s,color 0.2s}
+    .nav-cta:hover{background:var(--vert);color:var(--blanc)}
+    .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+    .burger span{display:block;width:22px;height:1.5px;background:var(--vert)}
+    .mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:var(--blanc);border-bottom:1px solid var(--border);padding:1.5rem clamp(1.25rem,4vw,3rem);flex-direction:column;gap:1.25rem;z-index:99}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--texte-doux)}
+
+    /* HERO */
+    .page-hero{padding-top:68px;background:var(--ivoire)}
+    .page-hero-inner{padding:clamp(3rem,6vw,5rem) 0;text-align:center}
+    .page-hero h1{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;color:var(--vert);line-height:1.1;margin-bottom:0.5rem}
+    .page-hero .sous-titre{font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-top:0.5rem}
+    .page-hero p{font-size:1rem;color:var(--texte-doux);max-width:48ch;margin:1.5rem auto 0;line-height:1.8}
+
+    /* GRILLE EBOOKS */
+    .ebooks-section{padding:clamp(3rem,6vw,5rem) 0}
+    .ebooks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:3rem}
+
+    /* CARTE EBOOK */
+    .ebook-card{display:flex;flex-direction:column;gap:1.5rem}
+    .ebook-mockup{position:relative;cursor:pointer;transition:transform 0.3s}
+    .ebook-mockup:hover{transform:translateY(-6px)}
+    .ebook-mockup-img{width:100%;border-radius:4px;box-shadow:-8px 8px 24px rgba(0,0,0,0.18);transition:box-shadow 0.3s}
+    .ebook-mockup:hover .ebook-mockup-img{box-shadow:-12px 12px 36px rgba(0,0,0,0.28)}
+    .ebook-badge{position:absolute;top:1rem;right:1rem;background:var(--or);color:var(--blanc);font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.65rem;border-radius:100px}
+    .ebook-badge.soon{background:var(--lin);color:var(--texte)}
+
+    .ebook-info h3{font-family:var(--font-display);font-size:1.4rem;font-weight:400;color:var(--vert);margin-bottom:0.4rem}
+    .ebook-info p{font-size:0.85rem;color:var(--texte-doux);line-height:1.75;margin-bottom:1rem}
+    .ebook-meta{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
+    .ebook-tag{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--texte-doux);border:1px solid var(--border);padding:0.2rem 0.6rem;border-radius:100px}
+    .btn-ebook{display:inline-block;background:var(--vert);color:var(--blanc);font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.5rem;border-radius:var(--radius);transition:background 0.2s}
+    .btn-ebook:hover{background:#2c3830}
+    .btn-ebook.soon{background:var(--lin);color:var(--texte);cursor:not-allowed;pointer-events:none}
+
+    /* Mockup placeholder pour les ebooks à venir */
+    .ebook-placeholder{width:100%;aspect-ratio:3/4;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;border:2px dashed var(--border);color:var(--texte-doux)}
+    .ebook-placeholder svg{opacity:0.3}
+    .ebook-placeholder span{font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase}
+
+    /* FOOTER */
+    footer{background:var(--vert);color:rgba(255,255,255,0.6);padding:2rem 0;font-size:0.75rem}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-logo{font-family:var(--font-display);font-size:1.1rem;font-weight:300;color:var(--blanc)}
+    footer a{color:rgba(255,255,255,0.6);transition:color 0.2s}
+    footer a:hover{color:var(--or)}
+
+    @media(max-width:900px){
+      .ebooks-grid{grid-template-columns:1fr 1fr}
+      .nav-links,.nav-cta{display:none}
+      .burger{display:flex}
+    }
+    @media(max-width:600px){
+      .ebooks-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo-ivoire.png" alt="DT Design" class="nav-logo-img" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Delphine Thuault</span>
+          <span class="nav-logo-titre">Architecte d'intérieur</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#apropos">À propos</a></li>
+        <li><a href="prestations.html">Prestations</a></li>
+        <li><a href="index.html#portfolio">Réalisations</a></li>
+        <li><a href="ebook.html" class="active">E-book</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Prendre contact</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#apropos" onclick="this.closest('.mobile-nav').classList.remove('open')">À propos</a>
+    <a href="prestations.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Prestations</a>
+    <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
+    <a href="ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')">E-book</a>
+    <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <h1>Mes guides gratuits</h1>
+        <p class="sous-titre">E-books à télécharger</p>
+        <p>Des ressources pratiques pour vous aider à mieux habiter votre intérieur — à télécharger gratuitement contre votre email.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRILLE EBOOKS -->
+  <section class="ebooks-section">
+    <div class="container">
+      <div class="ebooks-grid">
+
+        <!-- EBOOK 1 — Vivre dans un Perret -->
+        <div class="ebook-card">
+          <a href="perret-ebook.html" class="ebook-mockup">
+            <img src="logo-vert.png" alt="Vivre dans un Perret — Guide DT Design" class="ebook-mockup-img" />
+            <span class="ebook-badge">Gratuit</span>
+          </a>
+          <div class="ebook-info">
+            <h3>Vivre dans un Perret</h3>
+            <p>Le guide pratique pour aménager et sublimer votre appartement havrais. 9 pages de conseils concrets sur les matériaux, la lumière et les volumes.</p>
+            <div class="ebook-meta">
+              <span class="ebook-tag">9 pages</span>
+              <span class="ebook-tag">Patrimoine Perret</span>
+              <span class="ebook-tag">Le Havre</span>
+            </div>
+            <a href="perret-ebook.html" class="btn-ebook">Je télécharge →</a>
+          </div>
+        </div>
+
+        <!-- EBOOK 2 — À venir -->
+        <div class="ebook-card">
+          <div class="ebook-mockup" style="cursor:default;">
+            <div class="ebook-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              <span>Bientôt disponible</span>
+            </div>
+          </div>
+          <div class="ebook-info">
+            <h3>Guide Feng Shui</h3>
+            <p>Comment harmoniser l'énergie de votre intérieur grâce aux principes du Feng Shui — un guide accessible pour tous les espaces.</p>
+            <div class="ebook-meta">
+              <span class="ebook-tag">À venir</span>
+              <span class="ebook-tag">Feng Shui</span>
+              <span class="ebook-tag">Bien-être</span>
+            </div>
+            <a href="#" class="btn-ebook soon">Bientôt disponible</a>
+          </div>
+        </div>
+
+        <!-- EBOOK 3 — À venir -->
+        <div class="ebook-card">
+          <div class="ebook-mockup" style="cursor:default;">
+            <div class="ebook-placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              <span>Bientôt disponible</span>
+            </div>
+          </div>
+          <div class="ebook-info">
+            <h3>Neuro-architecture</h3>
+            <p>Comment votre cerveau réagit à votre espace — et comment concevoir un intérieur qui favorise votre bien-être, votre concentration et votre sommeil.</p>
+            <div class="ebook-meta">
+              <span class="ebook-tag">À venir</span>
+              <span class="ebook-tag">Neuro-architecture</span>
+              <span class="ebook-tag">Bien-être</span>
+            </div>
+            <a href="#" class="btn-ebook soon">Bientôt disponible</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <img src="logo-ivoire.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
+          <span class="footer-logo">DT — Design</span>
+        </div>
+        <span>© 2025 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
+        <span>
+          <a href="mailto:delphine@dt-design.fr">delphine@dt-design.fr</a>
+          · <a href="tel:+33767799756">07 67 79 97 56</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

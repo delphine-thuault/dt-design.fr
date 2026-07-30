@@ -138,16 +138,20 @@
     }
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       list-style: none;
+      flex: 1;
+      justify-content: center;
+      flex-wrap: nowrap;
     }
     .nav-links a {
-      font-size: 0.8rem;
+      font-size: 0.72rem;
       font-weight: 400;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--texte-doux);
       transition: color 0.2s;
+      white-space: nowrap;
     }
     .nav-links a:hover { color: var(--vert); }
     .nav-cta {
@@ -727,7 +731,7 @@
   <nav>
     <div class="nav-inner">
       <a href="#accueil" class="nav-logo">
-        <img src="logo.png" alt="DT Design — Delphine Thuault" class="nav-logo-img" />
+        <img src="logo-ivoire.png" alt="DT Design — Delphine Thuault" class="nav-logo-img" />
         <div class="nav-logo-text">
           <span class="nav-logo-name">Delphine Thuault</span>
           <span class="nav-logo-titre">Architecte d'intérieur</span>
@@ -737,6 +741,7 @@
         <li><a href="#apropos">À propos</a></li>
         <li><a href="prestations.html">Prestations</a></li>
         <li><a href="#portfolio">Réalisations</a></li>
+        <li><a href="ebook.html">E-book</a></li>
         <li><a href="#temoignages">Témoignages</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -750,6 +755,7 @@
     <a href="#apropos" onclick="document.getElementById('mobileNav').classList.remove('open')">À propos</a>
     <a href="prestations.html" onclick="document.getElementById('mobileNav').classList.remove('open')">Prestations</a>
     <a href="#portfolio" onclick="document.getElementById('mobileNav').classList.remove('open')">Réalisations</a>
+    <a href="perret-ebook.html" onclick="document.getElementById('mobileNav').classList.remove('open')">Vivre dans un Perret</a>
     <a href="#temoignages" onclick="document.getElementById('mobileNav').classList.remove('open')">Témoignages</a>
     <a href="#contact" onclick="document.getElementById('mobileNav').classList.remove('open')">Contact</a>
   </div>
@@ -759,8 +765,7 @@
     <div class="hero-content">
       <p class="eyebrow">Architecture d'intérieur · Le Havre</p>
       <h1 class="hero-tagline">
-        Des espaces<br>
-        qui vous<br>
+        Des espaces qui vous<br>
         <em>ressemblent.</em>
       </h1>
       <p class="hero-sub">
@@ -1068,7 +1073,7 @@
     <div class="container">
       <div class="footer-inner">
         <div style="display:flex;align-items:center;gap:0.6rem;">
-          <img src="logo.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
+          <img src="logo-ivoire.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
           <span class="footer-logo">DT — Design</span>
         </div>
         <span>© 2025 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
