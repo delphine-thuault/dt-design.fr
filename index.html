@@ -175,13 +175,13 @@
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding-top: 64px;
+      padding-top: 68px;
     }
     .hero-content {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: clamp(3rem, 8vw, 7rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 8vw, 7rem) clamp(1.25rem, 6vw, 5rem);
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 6vw, 5rem);
       background: var(--blanc);
     }
     .hero-tagline {
@@ -738,6 +738,7 @@
         </div>
       </a>
       <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="#apropos">À propos</a></li>
         <li><a href="prestations.html">Prestations</a></li>
         <li><a href="#portfolio">Réalisations</a></li>
@@ -752,10 +753,11 @@
     </div>
   </nav>
   <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="document.getElementById('mobileNav').classList.remove('open')">Home</a>
     <a href="#apropos" onclick="document.getElementById('mobileNav').classList.remove('open')">À propos</a>
     <a href="prestations.html" onclick="document.getElementById('mobileNav').classList.remove('open')">Prestations</a>
     <a href="#portfolio" onclick="document.getElementById('mobileNav').classList.remove('open')">Réalisations</a>
-    <a href="perret-ebook.html" onclick="document.getElementById('mobileNav').classList.remove('open')">Vivre dans un Perret</a>
+    <a href="ebook.html" onclick="document.getElementById('mobileNav').classList.remove('open')">E-book</a>
     <a href="#temoignages" onclick="document.getElementById('mobileNav').classList.remove('open')">Témoignages</a>
     <a href="#contact" onclick="document.getElementById('mobileNav').classList.remove('open')">Contact</a>
   </div>

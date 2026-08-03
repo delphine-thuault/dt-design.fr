@@ -38,20 +38,85 @@
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
-    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); height: 64px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
-    .nav-logo-img { width: 48px; height: 48px; object-fit: contain; }
-    .nav-logo span { font-size: 0.65rem; font-family: var(--font-body); font-weight: 300; letter-spacing: 0.14em; text-transform: uppercase; color: var(--texte-doux); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texte-doux); transition: color 0.2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--vert); }
-    .nav-cta { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; padding: 0.5rem 1.25rem; border: 1px solid var(--vert); color: var(--vert); border-radius: var(--radius); transition: background 0.2s, color 0.2s; }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 3rem);
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+    }
+    .nav-logo-img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;
+    }
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .nav-logo-name {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--vert);
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .nav-logo-titre {
+      font-size: 0.62rem;
+      font-family: var(--font-body);
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--texte-doux);
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      flex: 1;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+    .nav-links a {
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--texte-doux);
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--vert); }
+    .nav-cta {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--vert);
+      color: var(--vert);
+      border-radius: var(--radius);
+      transition: background 0.2s, color 0.2s;
+    }
     .nav-cta:hover { background: var(--vert); color: var(--blanc); }
     .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 4px; }
     .burger span { display: block; width: 22px; height: 1.5px; background: var(--vert); }
     .mobile-nav { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--blanc); border-bottom: 1px solid var(--border); padding: 1.5rem clamp(1.25rem, 4vw, 3rem); flex-direction: column; gap: 1.25rem; z-index: 99; }
     .mobile-nav.open { display: flex; }
-    .mobile-nav a { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texte-doux); }
+    .mobile-nav a { font-size: 0.85rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--texte-doux); }
 
     /* HERO PAGE */
     .page-hero {
@@ -78,26 +143,25 @@
       margin: 0 auto 2.5rem;
       line-height: 1.8;
     }
-    .page-nav-prestations {
+    .section-nav {
       display: flex;
       justify-content: center;
       gap: 0.5rem;
       flex-wrap: wrap;
-      padding-bottom: 2rem;
     }
-    .page-nav-prestations a {
+    .section-nav a {
       font-size: 0.75rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 0.5rem 1.25rem;
+      padding: 0.45rem 0.9rem;
       border: 1px solid var(--border);
       border-radius: 100px;
       color: var(--texte-doux);
       transition: all 0.2s;
     }
-    .page-nav-prestations a:hover,
-    .page-nav-prestations a.accueil { border-color: var(--vert); color: var(--vert); font-weight: 500; }
-    .page-nav-prestations a.accueil:hover { background: var(--vert); color: var(--blanc); }
+    .section-nav a:hover { border-color: var(--vert); color: var(--vert); }
+    .section-nav a.perret { border-color: var(--or); color: var(--or); }
+    .section-nav a.perret:hover { background: var(--or); color: var(--blanc); }
     .page-nav-prestations a.perret { border-color: var(--or); color: var(--or); }
 
     /* SECTIONS PRESTATIONS */
@@ -251,14 +315,14 @@
     }
 
     /* ÉTAPES */
-    .etapes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0; }
+    .etapes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; margin: 1rem 0; }
     .etape { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); padding: 1.25rem; border-radius: var(--radius); }
     .etape-num { font-family: var(--font-display); font-size: 2rem; font-weight: 300; color: var(--or); line-height: 1; margin-bottom: 0.4rem; }
-    .etape-title { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.9); margin-bottom: 0.35rem; }
+    .etape-title { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.06em; color: rgba(255,255,255,0.9); margin-bottom: 0.35rem; }
     .etape-desc { font-size: 0.78rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
 
     /* MATÉRIAUX */
-    .materiaux { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0; }
+    .materiaux { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin: 1rem 0; }
     .materiau { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); padding: 1.25rem; border-radius: var(--radius); text-align: center; }
     .materiau-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
     .materiau-title { font-size: 0.78rem; font-weight: 500; color: var(--or); margin-bottom: 0.3rem; letter-spacing: 0.06em; }
@@ -279,14 +343,14 @@
       margin-bottom: 0.75rem;
     }
     .cta-section p { font-size: 0.92rem; color: var(--texte-doux); margin-bottom: 2rem; }
-    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-actions { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
     .btn-outline {
       display: inline-block;
       border: 1px solid var(--vert);
       color: var(--vert);
       font-size: 0.78rem;
       font-weight: 400;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
       padding: 0.8rem 1.75rem;
       border-radius: var(--radius);
@@ -295,9 +359,9 @@
     .btn-outline:hover { background: var(--vert); color: var(--blanc); }
 
     /* FOOTER */
-    footer { background: var(--vert); color: rgba(255,255,255,0.6); padding: 2rem 0; font-size: 0.75rem; letter-spacing: 0.05em; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 300; color: var(--blanc); }
+    footer { background: var(--vert); color: rgba(255,255,255,0.6); padding: 2rem 0; font-size: 0.75rem; letter-spacing: 0.03em; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; }
+    .footer-logo { font-family: var(--font-display); font-size: 0.95rem; font-weight: 300; color: var(--blanc); }
     footer a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
     footer a:hover { color: var(--or); }
 
@@ -317,12 +381,18 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <img src="logo-ivoire.png" alt="DT Design" class="nav-logo-img" />
-        <span>Delphine Thuault · Architecte d'intérieur</span>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Delphine Thuault</span>
+          <span class="nav-logo-titre">Architecte d'intérieur</span>
+          
+        </div>
       </a>
       <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="index.html#apropos">À propos</a></li>
         <li><a href="prestations.html" class="active">Prestations</a></li>
         <li><a href="index.html#portfolio">Réalisations</a></li>
+        <li><a href="ebook.html">E-book</a></li>
         <li><a href="index.html#temoignages">Témoignages</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
@@ -333,9 +403,11 @@
     </div>
   </nav>
   <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Home</a>
     <a href="index.html#apropos" onclick="this.closest('.mobile-nav').classList.remove('open')">À propos</a>
     <a href="prestations.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Prestations</a>
     <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
+    <a href="ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')">E-book</a>
     <a href="index.html#temoignages" onclick="this.closest('.mobile-nav').classList.remove('open')">Témoignages</a>
     <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
   </div>
@@ -346,14 +418,12 @@
       <div class="page-hero-inner">
         <h1>Mes prestations</h1>
         <p class="eyebrow" style="margin-top:0.5rem;">Ce que je fais pour vous</p>
-        <p>De la première rencontre à la livraison finale, je vous accompagne à chaque étape de votre projet — avec écoute, expertise et un regard singulier sur votre espace.</p>
-        <nav class="page-nav-prestations">
-          <a href="index.html" class="accueil">← Accueil</a>
-          <a href="#conseils">Rendez-vous conseils</a>
-          <a href="#perret" class="perret">✦ Rénovation Perret</a>
-          <a href="#amenagement">Aménagement d'intérieur</a>
-          <a href="#psychologie">Psychologie de l'habitat</a>
-        </nav>
+        <div style="display:inline-flex;gap:0;border:1px solid var(--border);border-radius:100px;overflow:hidden;margin-top:1.25rem;">
+          <a href="#conseils" style="font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--texte-doux);padding:0.5rem 1.1rem;white-space:nowrap;border-right:1px solid var(--border);transition:all 0.2s;text-decoration:none;" onmouseover="this.style.color='#3D4A3E'" onmouseout="this.style.color='#5A5A5A'">Rendez-vous conseils</a>
+          <a href="#perret" style="font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--or);padding:0.5rem 1.1rem;white-space:nowrap;border-right:1px solid var(--border);transition:all 0.2s;text-decoration:none;">✦ Rénovation Perret</a>
+          <a href="#amenagement" style="font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--texte-doux);padding:0.5rem 1.1rem;white-space:nowrap;border-right:1px solid var(--border);transition:all 0.2s;text-decoration:none;" onmouseover="this.style.color='#3D4A3E'" onmouseout="this.style.color='#5A5A5A'">Aménagement d'intérieur</a>
+          <a href="#psychologie" style="font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--texte-doux);padding:0.5rem 1.1rem;white-space:nowrap;transition:all 0.2s;text-decoration:none;" onmouseover="this.style.color='#3D4A3E'" onmouseout="this.style.color='#5A5A5A'">Psychologie de l'habitat</a>
+        </div>
       </div>
     </div>
   </div>
