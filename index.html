@@ -255,7 +255,7 @@
       overflow: hidden;
       background: var(--ivoire);
     }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .hero-image-placeholder {
       width: 100%;
       height: 100%;
@@ -674,8 +674,9 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      #accueil { grid-template-columns: 1fr; }
-      .hero-image { height: 50vw; min-height: 280px; }
+      #accueil { grid-template-columns: 1fr; height: auto; }
+      .hero-content { order: 2; padding: 2rem 1.25rem; }
+      .hero-image { order: 1; height: 55vw; min-height: 250px; max-height: 350px; }
       .apropos-grid,
       .prestations-header,
       .temoignages-grid,
