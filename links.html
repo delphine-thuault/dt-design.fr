@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delphine Thuault — DT Design</title>
+  <meta name="description" content="Architecte d'intérieur au Havre — Tous mes liens" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vert:#3D4A3E;--or:#B5986A;--ivoire:#F5F3EF;--sauge:#8FA68E;
+      --blanc:#ffffff;--texte:#2E2E2E;--texte-doux:#5A5A5A;--border:#E2DED7;
+      --font-display:'Cormorant Garamond',Georgia,serif;
+      --font-body:'Inter',system-ui,sans-serif;
+      --radius:4px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:var(--font-body);
+      background:var(--ivoire);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem 1rem;
+    }
+    .card{
+      max-width:420px;
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1.25rem;
+    }
+
+    /* HEADER */
+    .profile{text-align:center;margin-bottom:0.5rem;}
+    .profile-logo{width:90px;height:90px;object-fit:contain;margin:0 auto 1rem;}
+    .profile-name{
+      font-family:var(--font-display);
+      font-size:1.8rem;
+      font-weight:300;
+      color:var(--vert);
+      letter-spacing:0.04em;
+    }
+    .profile-titre{
+      font-size:0.7rem;
+      font-weight:400;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:var(--or);
+      margin-top:0.25rem;
+    }
+    .profile-location{
+      font-size:0.8rem;
+      color:var(--texte-doux);
+      margin-top:0.5rem;
+    }
+
+    /* DIVIDER */
+    .divider{width:40px;height:1px;background:var(--or);}
+
+    /* LIENS */
+    .links{width:100%;display:flex;flex-direction:column;gap:0.75rem;}
+    .link-btn{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      padding:1rem 1.25rem;
+      border-radius:var(--radius);
+      text-decoration:none;
+      transition:transform 0.2s, box-shadow 0.2s;
+      border:1px solid var(--border);
+    }
+    .link-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(61,74,62,0.12);}
+    .link-btn.primary{background:var(--vert);border-color:var(--vert);}
+    .link-btn.secondary{background:var(--blanc);}
+    .link-btn.or{background:var(--or);border-color:var(--or);}
+    .link-btn.outline{background:transparent;}
+
+    .link-icon{
+      width:36px;height:36px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;font-size:1.1rem;
+    }
+    .link-btn.primary .link-icon{background:rgba(255,255,255,0.15);}
+    .link-btn.secondary .link-icon{background:var(--ivoire);}
+    .link-btn.or .link-icon{background:rgba(255,255,255,0.2);}
+    .link-btn.outline .link-icon{background:var(--ivoire);}
+
+    .link-text{flex:1;}
+    .link-title{
+      font-size:0.88rem;
+      font-weight:500;
+      letter-spacing:0.03em;
+    }
+    .link-btn.primary .link-title{color:var(--blanc);}
+    .link-btn.secondary .link-title{color:var(--vert);}
+    .link-btn.or .link-title{color:var(--blanc);}
+    .link-btn.outline .link-title{color:var(--vert);}
+
+    .link-sub{
+      font-size:0.72rem;
+      margin-top:1px;
+    }
+    .link-btn.primary .link-sub{color:rgba(255,255,255,0.65);}
+    .link-btn.secondary .link-sub{color:var(--texte-doux);}
+    .link-btn.or .link-sub{color:rgba(255,255,255,0.75);}
+    .link-btn.outline .link-sub{color:var(--texte-doux);}
+
+    .link-arrow{font-size:0.9rem;}
+    .link-btn.primary .link-arrow{color:rgba(255,255,255,0.6);}
+    .link-btn.secondary .link-arrow{color:var(--or);}
+    .link-btn.or .link-arrow{color:rgba(255,255,255,0.7);}
+    .link-btn.outline .link-arrow{color:var(--or);}
+
+    /* FOOTER */
+    .footer{
+      font-size:0.7rem;
+      color:var(--texte-doux);
+      text-align:center;
+      margin-top:0.5rem;
+    }
+    .footer a{color:var(--or);text-decoration:none;}
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- PROFIL -->
+    <div class="profile">
+      <img src="logo-ivoire.png" alt="DT Design" class="profile-logo" />
+      <div class="profile-name">Delphine Thuault</div>
+      <div class="profile-titre">Architecte d'intérieur</div>
+      <div class="profile-location">📍 Le Havre, Normandie</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- LIENS -->
+    <div class="links">
+
+      <a href="https://dt-design.fr" class="link-btn primary">
+        <div class="link-icon">🌐</div>
+        <div class="link-text">
+          <div class="link-title">Mon site internet</div>
+          <div class="link-sub">dt-design.fr</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a href="https://dt-design.fr/perret-ebook.html" class="link-btn or">
+        <div class="link-icon">📖</div>
+        <div class="link-text">
+          <div class="link-title">Guide gratuit — Vivre dans un Perret</div>
+          <div class="link-sub">Télécharger le guide · 9 pages · Gratuit</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a href="https://dt-design.fr/prestations.html" class="link-btn secondary">
+        <div class="link-icon">🏠</div>
+        <div class="link-text">
+          <div class="link-title">Mes prestations</div>
+          <div class="link-sub">Rendez-vous conseils · Rénovation Perret · Aménagement</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a href="https://dt-design.fr/#contact" class="link-btn outline">
+        <div class="link-icon">✉️</div>
+        <div class="link-text">
+          <div class="link-title">Me contacter</div>
+          <div class="link-sub">Pour votre projet d'intérieur</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a href="https://www.instagram.com/delphine.design_le_havre/" class="link-btn secondary">
+        <div class="link-icon">📸</div>
+        <div class="link-text">
+          <div class="link-title">Instagram</div>
+          <div class="link-sub">@delphine.design_le_havre</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+
+    </div>
+
+    <div class="footer">
+      © 2025 DT Design · <a href="https://dt-design.fr">dt-design.fr</a>
+    </div>
+
+  </div>
+</body>
+</html>
