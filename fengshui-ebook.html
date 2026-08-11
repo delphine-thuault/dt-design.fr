@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Éveil des sens — Guide gratuit · DT Design</title>
+  <meta name="description" content="Téléchargez gratuitement le guide de Delphine Thuault pour aménager et sublimer votre appartement Perret au Havre. 9 pages de conseils pratiques." />
+  <link rel="canonical" href="https://dt-design.fr/fengshui-ebook.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vert:#3D4A3E;--sauge:#8FA68E;--lin:#C8BFAE;--ivoire:#F5F3EF;--or:#B5986A;
+      --blanc:#ffffff;--texte:#2E2E2E;--texte-doux:#5A5A5A;--border:#E2DED7;
+      --font-display:'Cormorant Garamond',Georgia,serif;
+      --font-body:'Inter',system-ui,sans-serif;
+      --radius:2px;--max:1100px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--texte);background:var(--blanc)}
+    img{display:block;object-fit:cover}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
+    .eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:0.85rem}
+    .divider{width:40px;height:1px;background:var(--or);margin:1.5rem 0}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+        .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; }
+    .nav-logo-img { width: 52px; height: 52px; object-fit: contain; display: block; flex-shrink: 0; }
+    .nav-logo-text { display: flex; flex-direction: column; gap: 1px; }
+    .nav-logo-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--vert); letter-spacing: 0.04em; line-height: 1.2; white-space: nowrap; }
+    .nav-logo-titre { font-size: 0.62rem; font-family: var(--font-body); font-weight: 300; letter-spacing: 0.14em; text-transform: uppercase; color: var(--texte-doux); white-space: nowrap; }
+    .nav-links { display: flex; gap: 1rem; list-style: none; flex: 1; justify-content: center; flex-wrap: nowrap; }
+    .nav-links a { font-size: 0.72rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; color: var(--texte-doux); transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--vert); }
+    .nav-cta { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; padding: 0.5rem 1.25rem; border: 1px solid var(--vert); color: var(--vert); border-radius: var(--radius); transition: background 0.2s, color 0.2s; white-space: nowrap; }
+    .nav-cta:hover { background: var(--vert); color: var(--blanc); }
+    .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+    .burger span{display:block;width:22px;height:1.5px;background:var(--vert)}
+    .mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:var(--blanc);border-bottom:1px solid var(--border);padding:1.5rem clamp(1.25rem,4vw,3rem);flex-direction:column;gap:1.25rem;z-index:99}
+    .mobile-nav.open{display:flex}
+    .mobile-nav a{font-size:0.85rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--texte-doux)}
+
+    /* HERO */
+    .hero{padding-top:68px;background:var(--ivoire);min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+    .hero-content{padding:clamp(3rem,6vw,6rem) clamp(1.25rem,4vw,3rem) clamp(3rem,6vw,6rem) clamp(1.25rem,6vw,5rem)}
+    .hero-badge{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(181,152,106,0.18);border:1px solid rgba(181,152,106,0.4);color:var(--or);font-size:0.68rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 0.85rem;border-radius:100px;margin-bottom:1.25rem}
+    .hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,5vw,4.5rem);font-weight:300;color:var(--vert);line-height:1.1;margin-bottom:0.5rem}
+    .hero h1 em{color:var(--or);font-style:italic}
+    .hero-sous-titre{font-family:var(--font-display);font-size:1.1rem;font-style:italic;color:var(--sauge);margin-bottom:1.5rem;line-height:1.6}
+    .hero-desc{font-size:0.92rem;color:var(--texte-doux);line-height:1.85;margin-bottom:2rem;max-width:46ch}
+
+    /* FORM HERO */
+    .form-hero{display:flex;flex-direction:column;gap:0.85rem;max-width:400px}
+    .form-hero input{font-family:var(--font-body);font-size:0.9rem;padding:0.85rem 1rem;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:var(--blanc);border-radius:var(--radius);outline:none;transition:border-color 0.2s}
+    .form-hero input::placeholder{color:rgba(255,255,255,0.4)}
+    .form-hero input:focus{border-color:var(--or)}
+    .form-hero button{background:var(--or);color:var(--blanc);font-family:var(--font-body);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.95rem 2rem;border:none;border-radius:var(--radius);cursor:pointer;transition:background 0.2s}
+    .form-hero button:hover{background:#9a7d52}
+    .form-note{font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.25rem}
+
+    /* COUVERTURE */
+    .hero-visual{display:flex;align-items:center;justify-content:center;padding:3rem;position:relative}
+    .book-wrap{position:relative;filter:drop-shadow(-12px 12px 32px rgba(0,0,0,0.4))}
+    .book-img{width:420px;max-width:100%;border-radius:4px}
+
+    /* CE QUE VOUS ALLEZ DÉCOUVRIR */
+    .decouvrir{padding:clamp(3rem,6vw,5rem) 0;background:var(--ivoire)}
+    .decouvrir h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
+    .decouvrir-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+    .decouvrir-item{background:var(--blanc);padding:2rem;border-radius:var(--radius);border:1px solid var(--border)}
+    .decouvrir-num{font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--lin);line-height:1;margin-bottom:1rem}
+    .decouvrir-title{font-family:var(--font-display);font-size:1.2rem;font-weight:400;color:var(--vert);margin-bottom:0.5rem}
+    .decouvrir-desc{font-size:0.85rem;color:var(--texte-doux);line-height:1.75}
+
+    /* À PROPOS AUTEURE */
+    .auteure{padding:clamp(3rem,6vw,5rem) 0;background:var(--blanc)}
+    .auteure-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+    .auteure-img{aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden}
+    .auteure-img img{width:100%;height:100%;object-fit:cover}
+    .auteure-content h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
+    .auteure-content p{font-size:0.92rem;color:var(--texte-doux);line-height:1.85;margin-bottom:1rem}
+
+    /* CTA BAS */
+    .cta-bas{padding:clamp(3rem,6vw,5rem) 0;background:var(--vert);text-align:center}
+    .cta-bas h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--blanc);margin-bottom:0.75rem}
+    .cta-bas p{font-size:0.92rem;color:rgba(255,255,255,0.7);margin-bottom:2rem}
+    .form-bas{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;max-width:500px;margin:0 auto}
+    .form-bas input{font-family:var(--font-body);font-size:0.9rem;padding:0.85rem 1rem;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:var(--blanc);border-radius:var(--radius);outline:none;flex:1;min-width:200px}
+    .form-bas input::placeholder{color:rgba(255,255,255,0.4)}
+    .form-bas input:focus{border-color:var(--or)}
+    .form-bas button{background:var(--or);color:var(--blanc);font-family:var(--font-body);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.85rem 1.75rem;border:none;border-radius:var(--radius);cursor:pointer;white-space:nowrap}
+
+    /* FOOTER */
+    footer{background:var(--vert);color:rgba(255,255,255,0.6);padding:2rem 0;font-size:0.75rem;border-top:1px solid rgba(255,255,255,0.1)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-logo{font-family:var(--font-display);font-size:1.1rem;font-weight:300;color:var(--blanc)}
+    footer a{color:rgba(255,255,255,0.6);transition:color 0.2s}
+    footer a:hover{color:var(--or)}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;min-height:auto}
+      .hero-visual{padding:2rem;padding-top:0}
+      .decouvrir-grid{grid-template-columns:1fr}
+      .auteure-grid{grid-template-columns:1fr}
+      .nav-links,.nav-cta{display:none}
+      .burger{display:flex}
+      .form-bas{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo-ivoire.png" alt="DT Design" class="nav-logo-img" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Delphine Thuault</span>
+          <span class="nav-logo-titre">Architecte d'intérieur</span>
+          
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#apropos"><span style="white-space:nowrap">À propos</span></a></li>
+        <li><a href="prestations.html">Prestations</a></li>
+        <li><a href="index.html#portfolio">Réalisations</a></li>
+        <li><a href="ebook.html"><span style="white-space:nowrap">E-book</span></a></li>
+        <li><a href="index.html#temoignages">Témoignages</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Prendre contact</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Home</a>
+    <a href="index.html#apropos" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">À propos</span></a>
+    <a href="prestations.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Prestations</a>
+    <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
+    <a href="ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">E-book</span></a>
+    <a href="index.html#temoignages" onclick="this.closest('.mobile-nav').classList.remove('open')">Témoignages</a>
+    <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
+  </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#apropos"><span style="white-space:nowrap">À propos</span></a></li>
+        <li><a href="prestations.html">Prestations</a></li>
+        <li><a href="index.html#portfolio">Réalisations</a></li>
+        <li><a href="fengshui-ebook.html" class="">Éveil des sens</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Prendre contact</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#apropos" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">À propos</span></a>
+    <a href="prestations.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Prestations</a>
+    <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
+    <a href="fengshui-ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Éveil des sens</a>
+    <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">✦ Guide gratuit · 6 pages</span>
+      <h1>Éveil des<br><em>sens</em></h1>
+      <p class="hero-sous-titre">Les secrets du Feng Shui appliqués à votre intérieur</p>
+      <p class="hero-desc">Votre intérieur agit sur vos émotions, votre énergie et votre qualité de sommeil. Ce guide vous donne les clés du Feng Shui pour transformer votre espace dès aujourd'hui — sans tout refaire.</p>
+      <form class="form-hero" action="https://formspree.io/f/xzeppdoo" method="POST">
+        <input type="text" name="name" placeholder="Votre prénom" required />
+        <input type="email" name="email" placeholder="Votre adresse email" required />
+        <input type="hidden" name="_subject" value="Nouvelle demande ebook Éveil des sens" />
+        <button type="submit">Je télécharge le guide →</button>
+        <span class="form-note">Gratuit · Sans spam · Désinscription en 1 clic</span>
+      </form>
+      <a href="Eveil-des-sens-Feng-Shui.pdf" download style="display:none;">⬇ Télécharger directement le guide</a>
+    </div>
+    <div class="hero-visual">
+      <div class="book-wrap">
+        <img src="mockup-fengshui-ebook.png" alt="Éveil des sens — Guide DT Design" class="book-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CE QUE VOUS ALLEZ DÉCOUVRIR -->
+  <section class="decouvrir">
+    <div class="container">
+      <p class="eyebrow">Au programme</p>
+      <h2>Ce que vous allez découvrir</h2>
+      <div class="divider"></div>
+      <div class="decouvrir-grid">
+        <div class="decouvrir-item">
+          <div class="decouvrir-num">01</div>
+          <h3 class="decouvrir-title">Les 5 principes fondamentaux</h3>
+          <p class="decouvrir-desc">Le Qi, le Bagua, les 5 éléments, les orientations et la position de commandement — les bases pour comprendre et transformer votre espace.</p>
+        </div>
+        <div class="decouvrir-item">
+          <div class="decouvrir-num">02</div>
+          <h3 class="decouvrir-title">Pièce par pièce</h3>
+          <p class="decouvrir-desc">Des conseils pratiques et immédiatement applicables pour l'entrée, le salon, la chambre et le bureau. Avec des exemples concrets de clients.</p>
+        </div>
+        <div class="decouvrir-item">
+          <div class="decouvrir-num">03</div>
+          <h3 class="decouvrir-title">Les 7 erreurs à éviter</h3>
+          <p class="decouvrir-desc">Les erreurs Feng Shui les plus courantes et leurs solutions simples — pour agir rapidement sans tout bouleverser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div style="display:flex;align-items:center;gap:0.6rem;">
+          <img src="logo-ivoire.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
+          <span class="footer-logo">DT — Design</span>
+        </div>
+        <span>© 2025 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
+        <span>
+          <a href="mailto:delphine@dt-design.fr">delphine@dt-design.fr</a>
+          · <a href="index.html">Retour au site</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
