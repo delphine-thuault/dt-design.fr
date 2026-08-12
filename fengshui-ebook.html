@@ -56,12 +56,12 @@
 
     /* FORM HERO */
     .form-hero{display:flex;flex-direction:column;gap:0.85rem;max-width:400px}
-    .form-hero input{font-family:var(--font-body);font-size:0.9rem;padding:0.85rem 1rem;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:var(--blanc);border-radius:var(--radius);outline:none;transition:border-color 0.2s}
-    .form-hero input::placeholder{color:rgba(255,255,255,0.4)}
+    .form-hero input{font-family:var(--font-body);font-size:0.9rem;padding:0.85rem 1rem;border:1px solid var(--border);background:var(--blanc);color:var(--texte);border-radius:var(--radius);outline:none;transition:border-color 0.2s}
+    .form-hero input::placeholder{color:var(--texte-doux)}
     .form-hero input:focus{border-color:var(--or)}
     .form-hero button{background:var(--or);color:var(--blanc);font-family:var(--font-body);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.95rem 2rem;border:none;border-radius:var(--radius);cursor:pointer;transition:background 0.2s}
     .form-hero button:hover{background:#9a7d52}
-    .form-note{font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.25rem}
+    .form-note{font-size:0.72rem;color:var(--texte-doux);margin-top:0.25rem}
 
     /* COUVERTURE */
     .hero-visual{display:flex;align-items:center;justify-content:center;padding:3rem;position:relative}
@@ -69,11 +69,11 @@
     .book-img{width:420px;max-width:100%;border-radius:4px}
 
     /* CE QUE VOUS ALLEZ DÉCOUVRIR */
-    .decouvrir{padding:clamp(3rem,6vw,5rem) 0;background:var(--ivoire)}
+    .decouvrir{padding:clamp(3rem,6vw,5rem) 0;background:var(--blanc)}
     .decouvrir h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
     .decouvrir-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-    .decouvrir-item{background:var(--blanc);padding:2rem;border-radius:var(--radius);border:1px solid var(--border)}
-    .decouvrir-num{font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--lin);line-height:1;margin-bottom:1rem}
+    .decouvrir-item{background:var(--ivoire);padding:2rem;border-radius:var(--radius);border:1px solid var(--border)}
+    .decouvrir-num{font-family:var(--font-display);font-size:3rem;font-weight:300;color:var(--vert);line-height:1;margin-bottom:1rem}
     .decouvrir-title{font-family:var(--font-display);font-size:1.2rem;font-weight:400;color:var(--vert);margin-bottom:0.5rem}
     .decouvrir-desc{font-size:0.85rem;color:var(--texte-doux);line-height:1.75}
 
@@ -175,7 +175,7 @@
   <section class="hero">
     <div class="hero-content">
       <span class="hero-badge">✦ Guide gratuit · 6 pages</span>
-      <h1>Éveil des<br><em>sens</em></h1>
+      <h1><em>Éveil des sens</em></h1>
       <p class="hero-sous-titre">Les secrets du Feng Shui appliqués à votre intérieur</p>
       <p class="hero-desc">Votre intérieur agit sur vos émotions, votre énergie et votre qualité de sommeil. Ce guide vous donne les clés du Feng Shui pour transformer votre espace dès aujourd'hui — sans tout refaire.</p>
       <form class="form-hero" action="https://formspree.io/f/xzeppdoo" method="POST">
