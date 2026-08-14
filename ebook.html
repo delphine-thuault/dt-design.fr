@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E-books — DT Design · Delphine Thuault</title>
   <meta name="description" content="Téléchargez gratuitement les guides pratiques de Delphine Thuault sur l'architecture d'intérieur, la rénovation Perret et le bien-être dans l'habitat." />
+  <meta property="og:title" content="Guides gratuits d'architecture intérieure | DT Design" />
+  <meta property="og:description" content="Téléchargez les guides gratuits de DT Design sur les appartements Perret, le Feng Shui et le bien-être dans l'habitat." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dt-design.fr/ebook.html" />
+  <meta property="og:image" content="https://dt-design.fr/mockup-fengshui-ebook.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://dt-design.fr/ebook.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -117,7 +123,7 @@
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <a href="index.html#contact" class="nav-cta">Prendre contact</a>
-      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-controls="mobileNav" aria-expanded="false" onclick="const menu=document.getElementById('mobileNav');const ouvert=menu.classList.toggle('open');this.setAttribute('aria-expanded',ouvert);this.setAttribute('aria-label',ouvert?'Fermer le menu':'Ouvrir le menu');">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -129,27 +135,6 @@
     <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
     <a href="ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">E-book</span></a>
     <a href="index.html#temoignages" onclick="this.closest('.mobile-nav').classList.remove('open')">Témoignages</a>
-    <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
-  </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html#apropos"><span style="white-space:nowrap">À propos</span></a></li>
-        <li><a href="prestations.html">Prestations</a></li>
-        <li><a href="index.html#portfolio">Réalisations</a></li>
-        <li><a href="ebook.html" class="active"><span style="white-space:nowrap">E-book</span></a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-      <a href="index.html#contact" class="nav-cta">Prendre contact</a>
-      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#apropos" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">À propos</span></a>
-    <a href="prestations.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Prestations</a>
-    <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
-    <a href="ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">E-book</span></a>
     <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
   </div>
 
@@ -172,7 +157,7 @@
         <!-- EBOOK 1 — Vivre dans un Perret -->
         <div class="ebook-card">
           <a href="perret-ebook.html" class="ebook-mockup">
-            <img src="mockup-perret-ebook.png" alt="Vivre dans un Perret — Guide DT Design" class="ebook-mockup-img" />
+            <img loading="lazy" decoding="async" src="mockup-perret-ebook.png" alt="Vivre dans un Perret — Guide DT Design" class="ebook-mockup-img" />
             <span class="ebook-badge">Gratuit</span>
           </a>
           <div class="ebook-info">
@@ -190,7 +175,7 @@
         <!-- EBOOK 2 — Feng Shui -->
         <div class="ebook-card">
           <a href="fengshui-ebook.html" class="ebook-mockup">
-            <img src="mockup-fengshui-ebook.png" alt="Éveil des sens — Guide Feng Shui DT Design" class="ebook-mockup-img" />
+            <img loading="lazy" decoding="async" src="mockup-fengshui-ebook.png" alt="Éveil des sens — Guide Feng Shui DT Design" class="ebook-mockup-img" />
             <span class="ebook-badge">Gratuit</span>
           </a>
           <div class="ebook-info">
@@ -238,10 +223,12 @@
           <img src="logo-ivoire.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
           <span class="footer-logo">DT — Design</span>
         </div>
-        <span>© 2025 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
+        <span>© 2026 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
         <span>
           <a href="mailto:delphine@dt-design.fr">delphine@dt-design.fr</a>
           · <a href="tel:+33767799756">07 67 79 97 56</a>
+          · <a href="mentions-legales.html">Mentions légales</a>
+          · <a href="politique-confidentialite.html">Confidentialité</a>
         </span>
       </div>
     </div>
