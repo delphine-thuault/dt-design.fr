@@ -62,6 +62,8 @@
     .form-hero button{background:var(--or);color:var(--blanc);font-family:var(--font-body);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.95rem 2rem;border:none;border-radius:var(--radius);cursor:pointer;transition:background 0.2s}
     .form-hero button:hover{background:#9a7d52}
     .form-note{font-size:0.72rem;color:var(--texte-doux);margin-top:0.25rem}
+    .form-status{display:none;font-size:0.78rem;line-height:1.5;margin-top:0.25rem}
+    .form-status.error{display:block;color:#9b3d35}
 
     /* COUVERTURE */
     .hero-visual{display:flex;align-items:center;justify-content:center;padding:3rem;position:relative}
@@ -178,12 +180,13 @@
       <h1><em>Éveil des sens</em></h1>
       <p class="hero-sous-titre">Les secrets du Feng Shui appliqués à votre intérieur</p>
       <p class="hero-desc">Votre intérieur agit sur vos émotions, votre énergie et votre qualité de sommeil. Ce guide vous donne les clés du Feng Shui pour transformer votre espace dès aujourd'hui — sans tout refaire.</p>
-      <form class="form-hero" action="https://formspree.io/f/xzeppdoo" method="POST">
+      <form class="form-hero" id="fengshuiForm" action="https://formspree.io/f/xzeppdoo" method="POST">
         <input type="text" name="name" placeholder="Votre prénom" required />
         <input type="email" name="email" placeholder="Votre adresse email" required />
         <input type="hidden" name="_subject" value="Nouvelle demande ebook Éveil des sens" />
         <button type="submit">Je télécharge le guide →</button>
         <span class="form-note">Gratuit · Sans spam · Désinscription en 1 clic</span>
+        <p class="form-status" id="formStatus" role="alert"></p>
       </form>
       <a href="Eveil-des-sens-Feng-Shui.pdf" download style="display:none;">⬇ Télécharger directement le guide</a>
     </div>
@@ -236,5 +239,34 @@
     </div>
   </footer>
 
+  <script>
+    const form = document.getElementById('fengshuiForm');
+    const status = document.getElementById('formStatus');
+    const button = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      button.disabled = true;
+      button.textContent = 'Envoi en cours…';
+      status.className = 'form-status';
+      status.textContent = '';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Formspree submission failed');
+        window.location.href = 'merci-fengshui.html';
+      } catch (error) {
+        status.textContent = "L'envoi n'a pas abouti. Merci de réessayer dans quelques instants.";
+        status.className = 'form-status error';
+        button.disabled = false;
+        button.textContent = 'Je télécharge le guide →';
+      }
+    });
+  </script>
 </body>
 </html>
