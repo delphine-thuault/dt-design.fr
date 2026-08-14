@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Votre guide Feng Shui est prêt — DT Design</title>
+  <meta name="description" content="Téléchargez votre guide Éveil des sens de DT Design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vert:#3D4A3E;--or:#B5986A;--ivoire:#F5F3EF;--blanc:#ffffff;
+      --texte:#2E2E2E;--texte-doux:#5A5A5A;
+      --font-display:'Cormorant Garamond',Georgia,serif;
+      --font-body:'Inter',system-ui,sans-serif;
+      --radius:2px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font-body);background:var(--vert);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+    .card{background:var(--ivoire);border-radius:8px;padding:clamp(2rem,6vw,4rem);max-width:540px;width:100%;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,0.2)}
+    .logo{width:80px;height:80px;object-fit:contain;margin:0 auto 1.5rem}
+    .eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:0.75rem}
+    h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);font-weight:300;color:var(--vert);line-height:1.1;margin-bottom:1rem}
+    h1 em{font-style:italic;color:var(--or)}
+    p{font-size:0.92rem;color:var(--texte-doux);line-height:1.8;margin-bottom:1.5rem}
+    .btn-download{display:inline-block;background:var(--vert);color:var(--blanc);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:1rem 2.5rem;border-radius:var(--radius);text-decoration:none;margin-bottom:1rem;transition:background 0.2s}
+    .btn-download:hover{background:#2c3830}
+    .btn-back{display:block;font-size:0.78rem;color:var(--texte-doux);text-decoration:none;margin-top:1rem;transition:color 0.2s}
+    .btn-back:hover{color:var(--vert)}
+    .divider{width:40px;height:1px;background:var(--or);margin:1.5rem auto}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img src="logo-ivoire.png" alt="DT Design" class="logo" />
+    <p class="eyebrow">Votre guide est prêt</p>
+    <h1>Merci pour votre<br><em>inscription</em></h1>
+    <div class="divider"></div>
+    <p>Votre guide <strong>Éveil des sens</strong> est prêt à télécharger. Cliquez sur le bouton ci-dessous pour découvrir les secrets du Feng Shui appliqués à votre intérieur.</p>
+    <a href="Eveil-des-sens-Feng-Shui.pdf" download class="btn-download">⬇ Télécharger mon guide</a>
+    <p style="font-size:0.8rem;color:var(--texte-doux);">Si le téléchargement ne démarre pas, <a href="Eveil-des-sens-Feng-Shui.pdf" style="color:var(--or);">cliquez ici</a>.</p>
+    <a href="index.html" class="btn-back">← Retour au site DT Design</a>
+  </main>
+</body>
+</html>
