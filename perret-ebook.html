@@ -61,6 +61,8 @@
     .form-hero input:focus{border-color:var(--or)}
     .form-hero button{background:var(--or);color:var(--blanc);font-family:var(--font-body);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.95rem 2rem;border:none;border-radius:var(--radius);cursor:pointer;transition:background 0.2s}
     .form-hero button:hover{background:#9a7d52}
+    .consent-row{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.72rem;line-height:1.5;cursor:pointer}
+    .consent-row input[type="checkbox"]{appearance:auto;width:16px;height:16px;padding:0;margin-top:0.15rem;flex:0 0 auto;accent-color:var(--or)}
     .form-note{font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:0.25rem}
     .form-status{display:none;font-size:0.78rem;line-height:1.5;margin-top:0.25rem}
     .form-status.error{display:block;color:#f0b7b2}
@@ -184,8 +186,13 @@
         <input type="text" name="name" placeholder="Votre prénom" required />
         <input type="email" name="email" placeholder="Votre adresse email" required />
         <input type="hidden" name="_subject" value="Nouvelle demande ebook Vivre dans un Perret" />
+        <input type="hidden" name="consentement_communications" id="perretFormConsentValue" value="non" />
+        <label class="consent-row">
+          <input type="checkbox" id="perretFormConsent" />
+          <span>J’accepte de recevoir par e-mail les conseils, actualités et offres de DT Design. Je pourrai retirer mon consentement à tout moment.</span>
+        </label>
         <button type="submit">Je télécharge le guide →</button>
-        <span class="form-note">Gratuit · Sans spam · Désinscription en 1 clic</span>
+        <span class="form-note">Gratuit · Vos données restent confidentielles</span>
         <p class="form-status" id="formStatus" role="alert"></p>
       </form>
     </div>
@@ -242,9 +249,12 @@
     const form = document.getElementById('perretForm');
     const status = document.getElementById('formStatus');
     const button = form.querySelector('button[type="submit"]');
+    const consent = document.getElementById('perretFormConsent');
+    const consentValue = document.getElementById('perretFormConsentValue');
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
+      consentValue.value = consent.checked ? 'oui' : 'non';
       button.disabled = true;
       button.textContent = 'Envoi en cours…';
       status.className = 'form-status';
