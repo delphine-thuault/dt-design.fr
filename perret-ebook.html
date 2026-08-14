@@ -12,6 +12,14 @@
   <meta property="og:image" content="https://dt-design.fr/mockup-perret-ebook.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://dt-design.fr/perret-ebook.html" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"À qui s’adresse le guide Vivre dans un Perret ?","acceptedAnswer":{"@type":"Answer","text":"Il s’adresse aux propriétaires, locataires et futurs acquéreurs d’un appartement Perret au Havre qui souhaitent mieux comprendre ses qualités architecturales et l’aménager avec justesse."}},
+    {"@type":"Question","name":"Que contient cet ebook sur les appartements Perret ?","acceptedAnswer":{"@type":"Answer","text":"Le guide réunit 9 pages de conseils sur la lumière, les volumes, les matériaux, les couleurs et les choix d’aménagement adaptés à l’architecture d’Auguste Perret."}},
+    {"@type":"Question","name":"Le téléchargement du guide est-il gratuit ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Le guide est envoyé gratuitement après saisie de votre prénom et de votre adresse e-mail."}},
+    {"@type":"Question","name":"Puis-je recevoir le guide sans accepter les communications commerciales ?","acceptedAnswer":{"@type":"Answer","text":"Oui. La case d’inscription aux conseils, actualités et offres de DT Design est facultative et n’empêche pas de recevoir l’ebook."}}
+  ]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -95,6 +103,14 @@
     .auteure-img img{width:100%;height:100%;object-fit:cover}
     .auteure-content h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
     .auteure-content p{font-size:0.92rem;color:var(--texte-doux);line-height:1.85;margin-bottom:1rem}
+
+    /* FAQ */
+    .faq{padding:clamp(3rem,6vw,5rem) 0;background:var(--ivoire)}
+    .faq h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
+    .faq-list{display:grid;gap:0.75rem;max-width:850px;margin-top:2rem}
+    .faq details{background:var(--blanc);border:1px solid var(--border);padding:1.1rem 1.25rem}
+    .faq summary{cursor:pointer;font-family:var(--font-display);font-size:1.15rem;color:var(--vert)}
+    .faq details p{font-size:0.88rem;color:var(--texte-doux);line-height:1.75;margin-top:0.75rem}
 
     /* CTA BAS */
     .cta-bas{padding:clamp(3rem,6vw,5rem) 0;background:var(--vert);text-align:center}
@@ -213,6 +229,20 @@
           <h3 class="decouvrir-title">Matériaux et couleurs adaptés</h3>
           <p class="decouvrir-desc">Les associations qui subliment le béton armé — bois, laiton, couleurs douces — pour un intérieur harmonieux et contemporain.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2 id="faq-title">Tout savoir avant de télécharger le guide</h2>
+      <div class="divider"></div>
+      <div class="faq-list">
+        <details><summary>À qui s’adresse le guide « Vivre dans un Perret » ?</summary><p>Aux propriétaires, locataires et futurs acquéreurs d’un appartement Perret au Havre qui souhaitent mieux comprendre ses qualités architecturales et l’aménager avec justesse.</p></details>
+        <details><summary>Que contient cet ebook ?</summary><p>Neuf pages de conseils sur la lumière, les volumes, les matériaux, les couleurs et les choix d’aménagement adaptés à l’architecture d’Auguste Perret.</p></details>
+        <details><summary>Le téléchargement est-il gratuit ?</summary><p>Oui. Le guide est envoyé gratuitement après la saisie de votre prénom et de votre adresse e-mail.</p></details>
+        <details><summary>Dois-je accepter les communications commerciales ?</summary><p>Non. Cette case est facultative et n’empêche pas de recevoir l’ebook.</p></details>
       </div>
     </div>
   </section>
