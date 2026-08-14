@@ -404,7 +404,7 @@
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <a href="index.html#contact" class="nav-cta">Prendre contact</a>
-      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-controls="mobileNav" aria-expanded="false" onclick="const menu=document.getElementById('mobileNav');const ouvert=menu.classList.toggle('open');this.setAttribute('aria-expanded',ouvert);this.setAttribute('aria-label',ouvert?'Fermer le menu':'Ouvrir le menu');">
         <span></span><span></span><span></span>
       </button>
     </div>
