@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Éveil des sens — Guide gratuit · DT Design</title>
   <meta name="description" content="Téléchargez gratuitement Éveil des sens, le guide Feng Shui de Delphine Thuault. 8 pages de conseils pour harmoniser votre intérieur et favoriser le bien-être." />
+  <meta property="og:title" content="Guide Feng Shui gratuit — Éveil des sens | DT Design" />
+  <meta property="og:description" content="8 pages de conseils Feng Shui pour harmoniser votre intérieur, pièce par pièce, et favoriser votre bien-être." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dt-design.fr/fengshui-ebook.html" />
+  <meta property="og:image" content="https://dt-design.fr/mockup-fengshui-ebook.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://dt-design.fr/fengshui-ebook.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +31,7 @@
     .container{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
     .eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:0.85rem}
     .divider{width:40px;height:1px;background:var(--or);margin:1.5rem 0}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
@@ -139,7 +146,7 @@
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <a href="index.html#contact" class="nav-cta">Prendre contact</a>
-      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
+      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-controls="mobileNav" aria-expanded="false" onclick="const menu=document.getElementById('mobileNav');const ouvert=menu.classList.toggle('open');this.setAttribute('aria-expanded',ouvert);this.setAttribute('aria-label',ouvert?'Fermer le menu':'Ouvrir le menu');">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -153,27 +160,6 @@
     <a href="index.html#temoignages" onclick="this.closest('.mobile-nav').classList.remove('open')">Témoignages</a>
     <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
   </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html#apropos"><span style="white-space:nowrap">À propos</span></a></li>
-        <li><a href="prestations.html">Prestations</a></li>
-        <li><a href="index.html#portfolio">Réalisations</a></li>
-        <li><a href="fengshui-ebook.html" class="">Éveil des sens</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-      <a href="index.html#contact" class="nav-cta">Prendre contact</a>
-      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#apropos" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">À propos</span></a>
-    <a href="prestations.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Prestations</a>
-    <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
-    <a href="fengshui-ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Éveil des sens</a>
-    <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
-  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -183,8 +169,10 @@
       <p class="hero-sous-titre">Les secrets du Feng Shui appliqués à votre intérieur</p>
       <p class="hero-desc">Votre intérieur agit sur vos émotions, votre énergie et votre qualité de sommeil. Ce guide vous donne les clés du Feng Shui pour transformer votre espace dès aujourd'hui — sans tout refaire.</p>
       <form class="form-hero" id="fengshuiForm" action="https://formspree.io/f/xzeppdoo" method="POST">
-        <input type="text" name="name" placeholder="Votre prénom" required />
-        <input type="email" name="email" placeholder="Votre adresse email" required />
+        <label class="sr-only" for="fengshuiName">Votre prénom</label>
+        <input id="fengshuiName" type="text" name="name" autocomplete="given-name" placeholder="Votre prénom" required />
+        <label class="sr-only" for="fengshuiEmail">Votre adresse e-mail</label>
+        <input id="fengshuiEmail" type="email" name="email" autocomplete="email" placeholder="Votre adresse email" required />
         <input type="hidden" name="_subject" value="Nouvelle demande ebook Éveil des sens" />
         <input type="hidden" name="consentement_communications" id="fengshuiFormConsentValue" value="non" />
         <label class="consent-row">
@@ -192,7 +180,7 @@
           <span>J’accepte de recevoir par e-mail les conseils, actualités et offres de DT Design. Je pourrai retirer mon consentement à tout moment.</span>
         </label>
         <button type="submit">Je télécharge le guide →</button>
-        <span class="form-note">Gratuit · Vos données restent confidentielles</span>
+        <span class="form-note">Gratuit · Vos données restent confidentielles · <a href="politique-confidentialite.html" style="color:inherit;text-decoration:underline;">En savoir plus</a></span>
         <p class="form-status" id="formStatus" role="alert"></p>
       </form>
       <a href="Eveil-des-sens-Feng-Shui.pdf" download style="display:none;">⬇ Télécharger directement le guide</a>
@@ -237,10 +225,12 @@
           <img src="logo-ivoire.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
           <span class="footer-logo">DT — Design</span>
         </div>
-        <span>© 2025 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
+        <span>© 2026 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
         <span>
           <a href="mailto:delphine@dt-design.fr">delphine@dt-design.fr</a>
           · <a href="index.html">Retour au site</a>
+          · <a href="mentions-legales.html">Mentions légales</a>
+          · <a href="politique-confidentialite.html">Confidentialité</a>
         </span>
       </div>
     </div>
