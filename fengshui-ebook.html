@@ -12,6 +12,14 @@
   <meta property="og:image" content="https://dt-design.fr/mockup-fengshui-ebook.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://dt-design.fr/fengshui-ebook.html" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"À qui s’adresse le guide Éveil des sens ?","acceptedAnswer":{"@type":"Answer","text":"Il s’adresse à toute personne qui souhaite découvrir le Feng Shui et améliorer simplement l’équilibre, la circulation et le bien-être dans son intérieur."}},
+    {"@type":"Question","name":"Que contient cet ebook Feng Shui ?","acceptedAnswer":{"@type":"Answer","text":"Le guide propose 8 pages consacrées aux principes essentiels du Feng Shui, à leur application pièce par pièce et aux erreurs courantes à éviter."}},
+    {"@type":"Question","name":"Faut-il refaire toute sa décoration pour appliquer les conseils ?","acceptedAnswer":{"@type":"Answer","text":"Non. Les recommandations sont pensées pour être appliquées progressivement, souvent en ajustant l’organisation, la circulation, les couleurs ou la place de certains objets."}},
+    {"@type":"Question","name":"Puis-je recevoir le guide sans accepter les communications commerciales ?","acceptedAnswer":{"@type":"Answer","text":"Oui. La case d’inscription aux conseils, actualités et offres de DT Design est facultative et n’empêche pas de recevoir l’ebook."}}
+  ]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -95,6 +103,14 @@
     .auteure-img img{width:100%;height:100%;object-fit:cover}
     .auteure-content h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
     .auteure-content p{font-size:0.92rem;color:var(--texte-doux);line-height:1.85;margin-bottom:1rem}
+
+    /* FAQ */
+    .faq{padding:clamp(3rem,6vw,5rem) 0;background:var(--ivoire)}
+    .faq h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
+    .faq-list{display:grid;gap:0.75rem;max-width:850px;margin-top:2rem}
+    .faq details{background:var(--blanc);border:1px solid var(--border);padding:1.1rem 1.25rem}
+    .faq summary{cursor:pointer;font-family:var(--font-display);font-size:1.15rem;color:var(--vert)}
+    .faq details p{font-size:0.88rem;color:var(--texte-doux);line-height:1.75;margin-top:0.75rem}
 
     /* CTA BAS */
     .cta-bas{padding:clamp(3rem,6vw,5rem) 0;background:var(--vert);text-align:center}
@@ -214,6 +230,20 @@
           <h3 class="decouvrir-title">Les 7 erreurs à éviter</h3>
           <p class="decouvrir-desc">Les erreurs Feng Shui les plus courantes et leurs solutions simples — pour agir rapidement sans tout bouleverser.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2 id="faq-title">Quelques repères avant de commencer</h2>
+      <div class="divider"></div>
+      <div class="faq-list">
+        <details><summary>À qui s’adresse le guide « Éveil des sens » ?</summary><p>À toute personne qui souhaite découvrir le Feng Shui et améliorer simplement l’équilibre, la circulation et le bien-être dans son intérieur.</p></details>
+        <details><summary>Que contient cet ebook Feng Shui ?</summary><p>Huit pages consacrées aux principes essentiels du Feng Shui, à leur application pièce par pièce et aux erreurs courantes à éviter.</p></details>
+        <details><summary>Faut-il refaire toute sa décoration ?</summary><p>Non. Les conseils peuvent s’appliquer progressivement, souvent en ajustant l’organisation, la circulation, les couleurs ou la place de certains objets.</p></details>
+        <details><summary>Dois-je accepter les communications commerciales ?</summary><p>Non. Cette case est facultative et n’empêche pas de recevoir l’ebook.</p></details>
       </div>
     </div>
   </section>
