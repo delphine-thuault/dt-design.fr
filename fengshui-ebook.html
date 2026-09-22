@@ -5,21 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Éveil des sens — Guide gratuit · DT Design</title>
   <meta name="description" content="Téléchargez gratuitement Éveil des sens, le guide Feng Shui de Delphine Thuault. 8 pages de conseils pour harmoniser votre intérieur et favoriser le bien-être." />
-  <meta property="og:title" content="Guide Feng Shui gratuit — Éveil des sens | DT Design" />
-  <meta property="og:description" content="8 pages de conseils Feng Shui pour harmoniser votre intérieur, pièce par pièce, et favoriser votre bien-être." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dt-design.fr/fengshui-ebook.html" />
-  <meta property="og:image" content="https://dt-design.fr/mockup-fengshui-ebook.png" />
-  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://dt-design.fr/fengshui-ebook.html" />
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"À qui s’adresse le guide Éveil des sens ?","acceptedAnswer":{"@type":"Answer","text":"Il s’adresse à toute personne qui souhaite découvrir le Feng Shui et améliorer simplement l’équilibre, la circulation et le bien-être dans son intérieur."}},
-    {"@type":"Question","name":"Que contient cet ebook Feng Shui ?","acceptedAnswer":{"@type":"Answer","text":"Le guide propose 8 pages consacrées aux principes essentiels du Feng Shui, à leur application pièce par pièce et aux erreurs courantes à éviter."}},
-    {"@type":"Question","name":"Faut-il refaire toute sa décoration pour appliquer les conseils ?","acceptedAnswer":{"@type":"Answer","text":"Non. Les recommandations sont pensées pour être appliquées progressivement, souvent en ajustant l’organisation, la circulation, les couleurs ou la place de certains objets."}},
-    {"@type":"Question","name":"Puis-je recevoir le guide sans accepter les communications commerciales ?","acceptedAnswer":{"@type":"Answer","text":"Oui. La case d’inscription aux conseils, actualités et offres de DT Design est facultative et n’empêche pas de recevoir l’ebook."}}
-  ]}
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -39,11 +25,10 @@
     .container{max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,3rem)}
     .eyebrow{font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--or);margin-bottom:0.85rem}
     .divider{width:40px;height:1px;background:var(--or);margin:1.5rem 0}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-        .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); height: 68px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; }
     .nav-logo-img { width: 52px; height: 52px; object-fit: contain; display: block; flex-shrink: 0; }
     .nav-logo-text { display: flex; flex-direction: column; gap: 1px; }
@@ -69,18 +54,11 @@
     .hero-sous-titre{font-family:var(--font-display);font-size:1.1rem;font-style:italic;color:var(--sauge);margin-bottom:1.5rem;line-height:1.6}
     .hero-desc{font-size:0.92rem;color:var(--texte-doux);line-height:1.85;margin-bottom:2rem;max-width:46ch}
 
-    /* FORM HERO */
-    .form-hero{display:flex;flex-direction:column;gap:0.85rem;max-width:400px}
-    .form-hero input{font-family:var(--font-body);font-size:0.9rem;padding:0.85rem 1rem;border:1px solid var(--border);background:var(--blanc);color:var(--texte);border-radius:var(--radius);outline:none;transition:border-color 0.2s}
-    .form-hero input::placeholder{color:var(--texte-doux)}
-    .form-hero input:focus{border-color:var(--or)}
-    .form-hero button{background:var(--or);color:var(--blanc);font-family:var(--font-body);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.95rem 2rem;border:none;border-radius:var(--radius);cursor:pointer;transition:background 0.2s}
-    .form-hero button:hover{background:#9a7d52}
-    .consent-row{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.72rem;line-height:1.5;cursor:pointer}
-    .consent-row input[type="checkbox"]{appearance:auto;width:16px;height:16px;padding:0;margin-top:0.15rem;flex:0 0 auto;accent-color:var(--or)}
-    .form-note{font-size:0.72rem;color:var(--texte-doux);margin-top:0.25rem}
-    .form-status{display:none;font-size:0.78rem;line-height:1.5;margin-top:0.25rem}
-    .form-status.error{display:block;color:#9b3d35}
+    /* TÉLÉCHARGEMENT DIRECT (remplace l'ancien formulaire Formspree) */
+    .download-cta{display:flex;flex-direction:column;gap:0.6rem;align-items:flex-start}
+    .btn-download{display:inline-block;background:var(--or);color:var(--blanc);font-family:var(--font-body);font-size:0.85rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:0.95rem 2rem;border-radius:var(--radius);transition:background 0.2s}
+    .btn-download:hover{background:#9a7d52}
+    .form-note{font-size:0.72rem;color:var(--texte-doux)}
 
     /* COUVERTURE */
     .hero-visual{display:flex;align-items:center;justify-content:center;padding:3rem;position:relative}
@@ -96,32 +74,6 @@
     .decouvrir-title{font-family:var(--font-display);font-size:1.2rem;font-weight:400;color:var(--vert);margin-bottom:0.5rem}
     .decouvrir-desc{font-size:0.85rem;color:var(--texte-doux);line-height:1.75}
 
-    /* À PROPOS AUTEURE */
-    .auteure{padding:clamp(3rem,6vw,5rem) 0;background:var(--blanc)}
-    .auteure-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
-    .auteure-img{aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden}
-    .auteure-img img{width:100%;height:100%;object-fit:cover}
-    .auteure-content h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
-    .auteure-content p{font-size:0.92rem;color:var(--texte-doux);line-height:1.85;margin-bottom:1rem}
-
-    /* FAQ */
-    .faq{padding:clamp(3rem,6vw,5rem) 0;background:var(--ivoire)}
-    .faq h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--vert);margin-bottom:1rem}
-    .faq-list{display:grid;gap:0.75rem;max-width:850px;margin-top:2rem}
-    .faq details{background:var(--blanc);border:1px solid var(--border);padding:1.1rem 1.25rem}
-    .faq summary{cursor:pointer;font-family:var(--font-display);font-size:1.15rem;color:var(--vert)}
-    .faq details p{font-size:0.88rem;color:var(--texte-doux);line-height:1.75;margin-top:0.75rem}
-
-    /* CTA BAS */
-    .cta-bas{padding:clamp(3rem,6vw,5rem) 0;background:var(--vert);text-align:center}
-    .cta-bas h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;color:var(--blanc);margin-bottom:0.75rem}
-    .cta-bas p{font-size:0.92rem;color:rgba(255,255,255,0.7);margin-bottom:2rem}
-    .form-bas{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;max-width:500px;margin:0 auto}
-    .form-bas input{font-family:var(--font-body);font-size:0.9rem;padding:0.85rem 1rem;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:var(--blanc);border-radius:var(--radius);outline:none;flex:1;min-width:200px}
-    .form-bas input::placeholder{color:rgba(255,255,255,0.4)}
-    .form-bas input:focus{border-color:var(--or)}
-    .form-bas button{background:var(--or);color:var(--blanc);font-family:var(--font-body);font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:0.85rem 1.75rem;border:none;border-radius:var(--radius);cursor:pointer;white-space:nowrap}
-
     /* FOOTER */
     footer{background:var(--vert);color:rgba(255,255,255,0.6);padding:2rem 0;font-size:0.75rem;border-top:1px solid rgba(255,255,255,0.1)}
     .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
@@ -133,10 +85,8 @@
       .hero{grid-template-columns:1fr;min-height:auto}
       .hero-visual{padding:2rem;padding-top:0}
       .decouvrir-grid{grid-template-columns:1fr}
-      .auteure-grid{grid-template-columns:1fr}
       .nav-links,.nav-cta{display:none}
       .burger{display:flex}
-      .form-bas{flex-direction:column}
     }
   </style>
 </head>
@@ -149,32 +99,20 @@
         <div class="nav-logo-text">
           <span class="nav-logo-name">Delphine Thuault</span>
           <span class="nav-logo-titre">Architecte d'intérieur</span>
-          
         </div>
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#apropos"><span style="white-space:nowrap">À propos</span></a></li>
-        <li><a href="prestations.html">Prestations</a></li>
-        <li><a href="index.html#portfolio">Réalisations</a></li>
-        <li><a href="ebook.html"><span style="white-space:nowrap">E-book</span></a></li>
-        <li><a href="index.html#temoignages">Témoignages</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="ebook.html">E-books</a></li>
       </ul>
-      <a href="index.html#contact" class="nav-cta">Prendre contact</a>
-      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-controls="mobileNav" aria-expanded="false" onclick="const menu=document.getElementById('mobileNav');const ouvert=menu.classList.toggle('open');this.setAttribute('aria-expanded',ouvert);this.setAttribute('aria-label',ouvert?'Fermer le menu':'Ouvrir le menu');">
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Home</a>
-    <a href="index.html#apropos" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">À propos</span></a>
-    <a href="prestations.html" onclick="this.closest('.mobile-nav').classList.remove('open')">Prestations</a>
-    <a href="index.html#portfolio" onclick="this.closest('.mobile-nav').classList.remove('open')">Réalisations</a>
-    <a href="ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')"><span style="white-space:nowrap">E-book</span></a>
-    <a href="index.html#temoignages" onclick="this.closest('.mobile-nav').classList.remove('open')">Témoignages</a>
-    <a href="index.html#contact" onclick="this.closest('.mobile-nav').classList.remove('open')">Contact</a>
+    <a href="ebook.html" onclick="this.closest('.mobile-nav').classList.remove('open')">E-books</a>
   </div>
 
   <!-- HERO -->
@@ -184,22 +122,10 @@
       <h1><em>Éveil des sens</em></h1>
       <p class="hero-sous-titre">Les secrets du Feng Shui appliqués à votre intérieur</p>
       <p class="hero-desc">Votre intérieur agit sur vos émotions, votre énergie et votre qualité de sommeil. Ce guide vous donne les clés du Feng Shui pour transformer votre espace dès aujourd'hui — sans tout refaire.</p>
-      <form class="form-hero" id="fengshuiForm" action="https://formspree.io/f/xzeppdoo" method="POST">
-        <label class="sr-only" for="fengshuiName">Votre prénom</label>
-        <input id="fengshuiName" type="text" name="name" autocomplete="given-name" placeholder="Votre prénom" required />
-        <label class="sr-only" for="fengshuiEmail">Votre adresse e-mail</label>
-        <input id="fengshuiEmail" type="email" name="email" autocomplete="email" placeholder="Votre adresse email" required />
-        <input type="hidden" name="_subject" value="Nouvelle demande ebook Éveil des sens" />
-        <input type="hidden" name="consentement_communications" id="fengshuiFormConsentValue" value="non" />
-        <label class="consent-row">
-          <input type="checkbox" id="fengshuiFormConsent" />
-          <span>J’accepte de recevoir par e-mail les conseils, actualités et offres de DT Design. Je pourrai retirer mon consentement à tout moment.</span>
-        </label>
-        <button type="submit">Je télécharge le guide →</button>
-        <span class="form-note">Gratuit · Vos données restent confidentielles · <a href="politique-confidentialite.html" style="color:inherit;text-decoration:underline;">En savoir plus</a></span>
-        <p class="form-status" id="formStatus" role="alert"></p>
-      </form>
-      <a href="Eveil-des-sens-Feng-Shui.pdf" download style="display:none;">⬇ Télécharger directement le guide</a>
+      <div class="download-cta">
+        <a href="Eveil-des-sens-Feng-Shui.pdf" download class="btn-download">Je télécharge le guide →</a>
+        <span class="form-note">Gratuit · Téléchargement direct, sans inscription</span>
+      </div>
     </div>
     <div class="hero-visual">
       <div class="book-wrap">
@@ -234,20 +160,6 @@
     </div>
   </section>
 
-  <section class="faq" aria-labelledby="faq-title">
-    <div class="container">
-      <p class="eyebrow">Questions fréquentes</p>
-      <h2 id="faq-title">Quelques repères avant de commencer</h2>
-      <div class="divider"></div>
-      <div class="faq-list">
-        <details><summary>À qui s’adresse le guide « Éveil des sens » ?</summary><p>À toute personne qui souhaite découvrir le Feng Shui et améliorer simplement l’équilibre, la circulation et le bien-être dans son intérieur.</p></details>
-        <details><summary>Que contient cet ebook Feng Shui ?</summary><p>Huit pages consacrées aux principes essentiels du Feng Shui, à leur application pièce par pièce et aux erreurs courantes à éviter.</p></details>
-        <details><summary>Faut-il refaire toute sa décoration ?</summary><p>Non. Les conseils peuvent s’appliquer progressivement, souvent en ajustant l’organisation, la circulation, les couleurs ou la place de certains objets.</p></details>
-        <details><summary>Dois-je accepter les communications commerciales ?</summary><p>Non. Cette case est facultative et n’empêche pas de recevoir l’ebook.</p></details>
-      </div>
-    </div>
-  </section>
-
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -255,48 +167,13 @@
           <img src="logo-ivoire.png" alt="DT Design" style="width:36px;height:36px;object-fit:contain;">
           <span class="footer-logo">DT — Design</span>
         </div>
-        <span>© 2026 Delphine Thuault — Architecture d'intérieur · Le Havre</span>
+        <span>© 2025 Delphine Thuault</span>
         <span>
-          <a href="mailto:delphine@dt-design.fr">delphine@dt-design.fr</a>
-          · <a href="index.html">Retour au site</a>
-          · <a href="mentions-legales.html">Mentions légales</a>
-          · <a href="politique-confidentialite.html">Confidentialité</a>
+          <a href="index.html">Retour au site</a>
         </span>
       </div>
     </div>
   </footer>
 
-  <script>
-    const form = document.getElementById('fengshuiForm');
-    const status = document.getElementById('formStatus');
-    const button = form.querySelector('button[type="submit"]');
-    const consent = document.getElementById('fengshuiFormConsent');
-    const consentValue = document.getElementById('fengshuiFormConsentValue');
-
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      consentValue.value = consent.checked ? 'oui' : 'non';
-      button.disabled = true;
-      button.textContent = 'Envoi en cours…';
-      status.className = 'form-status';
-      status.textContent = '';
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (!response.ok) throw new Error('Formspree submission failed');
-        window.location.href = 'merci-fengshui.html';
-      } catch (error) {
-        status.textContent = "L'envoi n'a pas abouti. Merci de réessayer dans quelques instants.";
-        status.className = 'form-status error';
-        button.disabled = false;
-        button.textContent = 'Je télécharge le guide →';
-      }
-    });
-  </script>
 </body>
 </html>
