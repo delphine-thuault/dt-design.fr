@@ -169,6 +169,24 @@
       margin-top: 2.75rem;
     }
 
+    .legal-links {
+      margin-top: 3rem;
+      font-size: 0.72rem;
+      color: var(--texte-doux);
+    }
+
+    .legal-links a {
+      color: var(--texte-doux);
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .legal-links a:hover,
+    .legal-links a:focus-visible {
+      color: var(--or);
+      border-color: var(--or);
+    }
+
     @media (prefers-reduced-motion: no-preference) {
       main { animation: rise .6s ease-out both; }
     }
@@ -200,6 +218,11 @@
   <a class="cta" href="https://www.instagram.com/delphine_le_havre/" target="_blank" rel="noopener">Continuer à suivre mon univers</a>
 
   <p class="baseline">Façonner l'espace,<br>éveiller les sens.</p>
+
+  <p class="legal-links">
+    <a href="mentions-legales.html">Mentions légales</a>
+    · <a href="politique-confidentialite.html">Politique de confidentialité</a>
+  </p>
 </main>
 
 </body>
