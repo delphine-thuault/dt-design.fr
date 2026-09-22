@@ -141,7 +141,24 @@
       color: var(--blanc);
     }
 
-    a:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; }
+    .top-link {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--vert);
+      border-bottom: 1px solid var(--vert);
+      padding-bottom: 2px;
+      margin-bottom: 2.5rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .top-link:hover,
+    .top-link:focus-visible {
+      color: var(--or);
+      border-color: var(--or);
+    }
 
     .baseline {
       font-family: var(--font-display);
@@ -164,6 +181,8 @@
 <body>
 
 <main>
+  <a class="top-link" href="ebook.html">Mes guides pratiques restent disponibles →</a>
+
   <img src="logo-ivoire.png" alt="DT Design — Delphine Thuault" class="logo-img" />
   <p class="logo-name">DT — Design</p>
   <p class="eyebrow">Le Havre &amp; Caen</p>
@@ -174,6 +193,7 @@
 
   <p class="section-lead">L'activité DT-Design a pris fin en septembre 2026, après six années passées à rénover appartements et maisons à Caen et au Havre — avec, depuis 2025, la neuro-architecture et le Feng Shui en plus.</p>
   <p class="section-lead">Merci à toutes les personnes qui m'ont fait confiance, aux projets qui ont nourri cette aventure et aux rencontres qui l'ont rendue si riche depuis 2020.</p>
+  <p class="section-lead">Mes guides pratiques restent en revanche accessibles et téléchargeables gratuitement.</p>
 
   <p class="signature">Delphine</p>
 
